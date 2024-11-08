@@ -1,0 +1,73 @@
+
+<section id="minimal-statistics">
+    <div class="container mt-5">
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs mb-3 " id="profileTabs" style="margin-top: 5rem;" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab">TO ORDER</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical" type="button" role="tab">ORDERS</button>
+            </li>
+        </ul>
+    
+        <!-- Profile Card -->
+        <div class="tab-content">
+            <div class="tab-pane fade show active " id="general" role="tabpanel">
+             
+                <div class="card-custom">
+                    <div class="card-header-custom">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+                            <div>
+                                <strong>John Adams</strong><br>
+                                <small>Room 2</small>
+                            </div>
+                        </div>
+                        <div class="queue-status">
+                             ALL QUEUED
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div style="margin-left: 30px;">
+                            <strong>MED 1</strong><br>
+                            <small>ABC Pharmacy</small>
+                            <span class="order-status" style="margin-left: 10px;">Email</span> <br>
+                            <!-- <span class="badge rounded-pill text-bg-danger mt-2">Last Order Failed</span> -->
+                        </div>
+                        <div class="med-status">
+                            <button type="button" class="btn btn-info"> <i class="fa-solid fa-check text-white"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-custom">
+                    <div class="card-header-custom">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+                            <div >
+                                <strong>John Wayne</strong><br>
+                                <small>Room unassigned</small>
+                            </div>
+                        </div>
+                        <div class="queue-status">
+                            ALL QUEUED
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div style="margin-left: 30px;">
+                            <strong>Asprin</strong>
+                            <small>Smiths</small>
+                            <span class="order-status">FAX</span> <br>
+                            <!-- <span class="badge rounded-pill text-bg-danger mt-2">Last Order Failed</span> -->
+                        </div>
+                        <div class="med-status ">
+                            <button type="button" class="btn btn-info"> <i class="fa-solid fa-check text-white"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="medical" role="tabpanel">Medical Info...</div>
+          
+        </div>
+    </div>
+</section>

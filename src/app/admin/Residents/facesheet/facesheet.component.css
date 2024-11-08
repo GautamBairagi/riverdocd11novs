@@ -1,0 +1,220 @@
+.profile-card {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background-color: #e23da3;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.profile-card h5 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.profile-card p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ff4cc9;
+    border-bottom: 2px solid #d11f87;
+}
+
+.basic-info-section {
+    margin-top: 20px;
+    padding-left: 70px;
+}
+
+.basic-info-section strong {
+    display: inline-block;
+    width: 150px;
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .profile-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-card h5 {
+        font-size: 20px;
+    }
+
+    .basic-info-section strong {
+        width: 120px;
+    }
+    .basic-info-section {
+    margin-top: 20px;
+    padding-left: 0px !important;
+}
+}
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.diagnosis-list, .history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.diagnosis-list li, .history-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.diagnosis-list li:last-child, .history-list li:last-child {
+    border-bottom: none;
+}
+
+.badge-severe {
+    background-color: #ff4c4c;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.badge-moderate {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.more-options {
+    cursor: pointer;
+}
+
+.more-options i {
+    font-size: 18px;
+    color: #666;
+}
+
+.add-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 14px;
+    }
+
+    .badge-severe, .badge-moderate {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+
+    .sub-text {
+        font-size: 10px;
+    }
+
+    .diagnosis-list li, .history-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .diagnosis-list li div, .history-list li div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .diagnosis-list li div span, .history-list li div span {
+        margin-left: 10px;
+    }
+}
+
+
+
+
+.navbar-custom {
+    background-color: rgb(247, 39, 108);
+  }
+
+  .nav-item {
+    color: white;
+  }
+
+  .nav-item:hover {
+    cursor: pointer;
+  }
+
+  .offcanvas-header {
+    background-color: #850F8D;
+    color: white;
+  }
+
+  .notification-icon {
+    font-size: 40px;
+    color: #850F8D;
+    margin-right: 10px;
+  }
+
+  .archive-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offcanvas-footer {
+    padding-bottom: 15px;
+  }
+
+  .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .notification-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  .notification-text {
+    font-size: 14px;
+  }

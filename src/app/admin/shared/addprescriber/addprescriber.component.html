@@ -1,0 +1,147 @@
+
+  <div class="container mt-4">
+    <h2 style="font-weight:500; margin-bottom: 20px; margin-top:5rem ;"> Add Nurse</h2>
+    <!-- General Information -->
+    <div class="mb-4">
+      <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">personal details</h4>
+      <form  [formGroup]="myForm" >
+        <div class="row g-3 mt-2">
+            <div class="col-md-6">
+                <label for="gender" style="font-weight: bold;">Register AS</label>
+                <select class="form-select mt-2" id="gender" formControlName="registerdAs"
+                [ngClass]="{'is-invalid': myForm.controls['registerdAs'].errors && ck }">
+                  <option value="" >select</option>
+                  <option>CNA</option>
+                  <option>LVN</option>
+                  <option>RN</option>
+                  <option>DSP</option>
+                </select>
+                <p class="text-danger" *ngIf="myForm.controls['registerdAs'].errors && ck">Registerd As is
+                    required
+                </p>
+              </div>
+          <!-- <div class="col-md-6">
+         
+            <label for="firstName" style="font-weight: bold;">register As</label>
+            <input type="text" class="form-control mt-2" id="firstName" placeholder="Enter first name">
+          </div> -->
+          <div class="col-md-6">
+            <label for="name" style="font-weight: bold;">Name</label>
+            <input type="text" class="form-control mt-2" id="name" placeholder="Enter Name"formControlName="name"
+            [ngClass]="{'is-invalid': myForm.controls['name'].errors && ck }">
+            <p class="text-danger" *ngIf="myForm.controls['name'].errors && ck">Name is
+                required
+            </p>
+          </div>
+          <div class="col-md-6">
+            <label for="email" style="font-weight: bold;">Email</label>
+            <input type="email" class="form-control mt-2" id="email" placeholder="Enter Email" formControlName="email" 
+            [ngClass]="{'is-invalid': myForm.controls['email'].errors && ck }"
+            >
+            <p class="text-danger" *ngIf="myForm.controls['email'].errors && ck">Email is
+                required
+            </p>
+          </div>
+          <div class="col-md-6">
+            <label for="password" style="font-weight: bold;">Password</label>
+            <input type="password" class="form-control mt-2" id="password" placeholder="Password" formControlName="password" 
+            [ngClass]="{'is-invalid': myForm.controls['password'].errors && ck }">
+            <p class="text-danger" *ngIf="myForm.controls['password'].errors && ck">Password is
+                required
+            </p>
+          </div>
+          <div class="col-md-6">
+            <label for="Number" style="font-weight: bold;">Mobile Number</label>
+            <input type="text" class="form-control mt-2" id="number" placeholder="Enter Mobile Number" formControlName="mobileNumber"
+            [ngClass]="{'is-invalid': myForm.controls['mobileNumber'].errors && ck }">
+            <p class="text-danger" *ngIf="myForm.controls['mobileNumber'].errors && ck">From is
+                required
+            </p>
+          </div>
+        </div>
+        <div class="float-end"><button (click)="onSubmit()" type="button" class="btn float-end" style="background-color: white ; color: white; font-weight: bold;">Submit</button></div>
+      </form>
+    </div>
+
+ 
+
+
+
+    <!-- Patient List Table -->
+    <div class="mt-5 responsive-table">
+      <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;"> List</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mt-3">
+          <thead style="background-color: white ; color: white; white-space: nowrap;">
+            <tr>
+              <th>Register AS</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <!-- <tbody style="white-space: nowrap;">
+                <tr *ngFor="let admin of getpriscriber; let i = index">
+                <td>{{ i+1}} </td>
+                <td>{{admin.registerdAs}}</td>
+              <td>{{admin.name}}</td>
+              <td>{{admin.email}}</td>
+              <td>{{admin.mobileNumber}}</td>
+                    
+              <td>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                  <i class="fas fa-trash"></i>
+                </span>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                  <i class="fas fa-edit"></i>
+                </span>
+              </td>
+            </tr>
+          </tbody> -->
+
+
+          <tbody style="white-space: nowrap;">
+            <!-- Check if API data is available -->
+            <ng-container *ngIf="getpriscriber && getpriscriber.length > 0; else showStaticData">
+              <tr *ngFor="let admin of getpriscriber; let i = index">
+                <td>{{ admin.registerdAs }}</td>
+                <td>{{ admin.name }}</td>
+                <td>{{ admin.email }}</td>
+                <td>{{ admin.mobileNumber }}</td>
+                <td>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                </td>
+              </tr>
+            </ng-container>
+          
+            <!-- Define static data if API data is not available -->
+            <ng-template #showStaticData>
+              <tr>
+                <td>CNA</td>
+                <td>Dr Nayan</td>
+                <td>nayan@gmail.com</td>
+                <td>9898989898</td>
+                <td>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                </td>
+              </tr>
+              <!-- You can add more static rows here if needed -->
+            </ng-template>
+          </tbody>
+          
+          
+        </table>
+      </div>
+    </div>
+  </div>

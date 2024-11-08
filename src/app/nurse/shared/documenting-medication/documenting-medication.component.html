@@ -1,0 +1,103 @@
+<div id="main">
+    <div class="container mt-4">
+        <h2 style="font-weight:500; margin-bottom: 20px;">Documenting medication </h2>
+        <!-- General Information -->
+        <div class="mb-4">
+            <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">
+                Record of Medications given to resident </h4>
+            <form>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="Resident Name" style="font-weight: bold;">Resident Name</label>
+                        <input type="text" class="form-control mt-2" id="Resident Name"
+                            placeholder="Enter Resident Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Medication name" style="font-weight: bold;">Medications Name</label>
+                        <input type="name" class="form-control mt-2" id="Medication name"
+                            placeholder="Enter Medication name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dose" style="font-weight: bold;">Dose</label>
+                        <input type="text" class="form-control mt-2" id="" placeholder="Dose">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="frequency  of dose" style="font-weight: bold;">Frequency Of Dose</label>
+                        <input type="text" class="form-control mt-2" id="Medication name"
+                            placeholder="Frequency of dose">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="date" style="font-weight: bold;">Date</label>
+                        <input type="date" class="form-control mt-2" id="date" placeholder="Date">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" style="font-weight: bold;">Time</label>
+                        <input type="time" class="form-control mt-2" id="time" placeholder="time">
+                    </div>
+                    <div class="col-md-6">
+                        <label for=" medical condition of resident ." style="font-weight: bold;">Medical Condition
+                            of
+                            Resident</label>
+                        <input type="text" class="form-control mt-2" id="time"
+                            placeholder=" medical condition of resident .">
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="float-end"><button type="button" class="btn float-end"
+                            style="background-color: white ; color: white; font-weight: bold;">Submit</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <!-- Patient List Table -->
+        <div class="mt-5 responsive-table">
+            <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;"> List</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover mt-3">
+                    <thead style="background-color: white ; color: white; white-space: nowrap;">
+                        <tr>
+                            <th>#</th>
+                            <th>Resident Name</th>
+                            <th>Medication Name</th>
+                            <th>Dose</th>
+                            <th>Frequency Of Dose</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Medical Condition of Resident</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody style="white-space: nowrap;">
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>Medication</td>
+                            <td>Medication</td>
+                            <td>Medication</td>
+                            <td>22/01/2024</td>
+                            <td>10:20 AM</td>
+                            <td>+</td>
+                            <td>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Add more patient rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

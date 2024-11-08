@@ -1,0 +1,127 @@
+<div id="main">
+    <div class="container" >
+        <h2 class="Adding" style=" font-weight:500; margin-bottom: 20px; font-size: 28px;  margin-top:5rem ;">
+           Adding new medication (PRN)   </h2>
+        <!-- General Information -->
+        <div class="mb-4">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">(MAR)</h4>
+          <form>
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label for="firstName" style="font-weight: bold;">Medication Name </label>
+                <input type="text" class="form-control mt-2" id="firstName" placeholder="Medication Name ">
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" style="font-weight: bold;">Frequency of Medication </label>
+                <input type="text" class="form-control mt-2" id="lastName" placeholder="Frequency of Medication">
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" style="font-weight: bold;">Medication Unit</label>
+                <input type="text" class="form-control mt-2" id="lastName" placeholder="Medication Unit">
+              </div>
+              <div class="col-md-6">
+                <label for="dob" style="font-weight: bold;">Manufacturing Date </label>
+                <input type="date" class="form-control mt-2" id="dob">
+              </div>
+              <div class="col-md-6">
+                <label for="dob" style="font-weight: bold;">Expiry Date </label>
+                <input type="date" class="form-control mt-2" id="dob">
+              </div>
+              <div class="col-md-6 text-end mt-4">
+                <button type="submit" class="btn mt-4 w-100" style="background-color: white ; color: white;">Add Patient</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    
+      
+       
+    
+        <!-- Patient List Table -->
+        <div class="mt-5 responsive-table">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;"> Medication  List</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover mt-3">
+              <thead style="background-color: white ; color: white; white-space: nowrap;">
+                <tr>
+                  <th>Medication Name </th>
+                  <th>Frequency of Medication </th>
+                  <th> Medication Unit </th>
+                  <th>Manufacturing Date </th>
+                  <th>Expiry Date </th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody style="white-space: nowrap;">
+                <tr>
+                  <td>John Doe</td>
+                  <td>1990-05-01</td>
+                  <td>O+</td>
+                  <td>02/05/2024</td>
+                  <td>25/05/2024</td>
+                  <td>
+                    <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                      <i class="fas fa-trash"></i>
+                    </span>
+                    <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                      <i class="fas fa-edit" data-bs-toggle="modal" href="#exampleModalToggle" role="button"></i>
+                    </span>
+                  </td>
+                </tr>
+                <!-- Add more patient rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    
+      <!-- start model  -->
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel">Adding new medication (PRN) </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-4">
+                    <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px; font-size: 16px;" class="shadow">Adding new medication (PRN) </h4>
+                    <form>
+                      <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                          <label for="firstName" style="font-weight: bold;">Medication Name </label>
+                          <input type="text" class="form-control mt-2" id="firstName" placeholder="Medication Name ">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="lastName" style="font-weight: bold;">Frequency of Medication </label>
+                          <input type="text" class="form-control mt-2" id="lastName" placeholder="Frequency of Medication">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="lastName" style="font-weight: bold;">Medication Unit</label>
+                          <input type="text" class="form-control mt-2" id="lastName" placeholder="Medication Unit">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="dob" style="font-weight: bold;">Manufacturing Date </label>
+                          <input type="date" class="form-control mt-2" id="dob">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="dob" style="font-weight: bold;">Expiry Date </label>
+                          <input type="date" class="form-control mt-2" id="dob">
+                        </div>
+                        <div class="col-md-6 text-end">
+                          <button type="submit" class="btn mt-5" style="background-color: white ; color: white;">Add Patient</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button class="btn text-light fw-bold w-100" style="background-color: white ;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- End Section  -->
+  </div>

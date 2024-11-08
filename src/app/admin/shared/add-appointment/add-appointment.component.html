@@ -1,0 +1,90 @@
+<section id="minimal-statistics">
+    <div class="container ">
+        <!-- Appointment Form -->
+        <div class="mb-4">
+          <h2 style="font-weight:500; margin-bottom: 20px;  margin-top:5rem ;">Add Appointment</h2>
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Appointment Information</h4>
+          <form [formGroup]="appointAddForm" (ngSubmit)="addAppointment()" >
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label for="residentName" style="font-weight: bold;">Resident Name</label>
+                <select formControlName="residentName"  class="form-select mt-2" >
+                  <option value="" hidden>Select</option>
+                  <option *ngFor="let p of allPatientData" [value]="p.name">{{ p.name }}</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="title" style="font-weight: bold;">Title</label>
+                <input type="text" class="form-control mt-2" id="title" formControlName="title" placeholder="Enter appointment title">
+              </div>
+              <div class="col-12">
+                <label for="description" style="font-weight: bold;">Description</label>
+                <textarea class="form-control mt-2" id="description" formControlName="description" rows="3" placeholder="Enter appointment description"></textarea>
+              </div>
+              <div class="col-md-6">
+                <label for="appointmentDate" style="font-weight: bold;">Date</label>
+                <input type="date" class="form-control mt-2" formControlName="date" id="appointmentDate">
+              </div>
+              <div class="col-md-3">
+                <label for="timeFrom" style="font-weight: bold;">Appointment Time (From)</label>
+                <input type="time" class="form-control mt-2" formControlName="appointmentTimeFrom" id="timeFrom">
+              </div>
+              <div class="col-md-3">
+                <label for="timeTo" style="font-weight: bold;">Appointment Time (To)</label>
+                <input type="time" class="form-control mt-2" formControlName="appointmentTimeTo" id="timeTo">
+              </div>
+            </div>
+            
+            <div class="row g-3 mt-2">
+              
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <button type="submit" class="btn" style="background-color: white ; color: white;">Add Appointment</button>
+              </div>
+              
+            </div>
+            
+          </form>
+        </div>
+    
+        <!-- Submit Button for Appointment -->
+       
+    
+        <!-- Appointment List Table -->
+        <div class="mt-5 responsive-table">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;">Appointment List</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover mt-3">
+              <thead style="background-color: white ; color: white; white-space: nowrap;">
+                <tr>
+                  <th>Resident Name</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody style="white-space: nowrap;">
+                <tr>
+                  <td>John Smith</td>
+                  <td>Doctor Visit</td>
+                  <td>Routine checkup</td>
+                  <td>2024-10-02</td>
+                  <td>10:00 AM - 11:00 AM</td>
+                  <td>
+                    <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                      <i class="fas fa-trash"></i>
+                    </span>
+                    <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                      <i class="fas fa-edit"></i>
+                    </span>
+                  </td>
+                </tr>
+                <!-- Add more appointment rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+  </section>

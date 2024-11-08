@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-sm navbar-dark navbar-fixed-top sh"
+  style="background-color: white ; color: rgb(27, 18, 18); height: 70px; z-index: 1050 !important;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/Home.html">
+      <img src="../../assets/homecare-removebg-preview.png"style="width: 70px;" alt="">
+      <!-- <img src="../../assets/5-6-1-1-removebg-preview2nd.png"style="width: 70px;" alt=""> -->
+
+    </a>
+    <span class="fw-bold fs-4">Home Care</span>
+
+    <button class="toggle-btn2" style="margin-left: 100px !important;" (click)="toggleNav()">
+      <i class="fas fa-bars" style="color: rgb(26, 10, 10) !important"></i>
+    </button>
+
+    <div class="collapse" id="mynavbar">
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+    
+    <button class="toggle-btn" (click)="toggleNav()">
+      <i class="fas fa-bars" style="color: rgb(19, 8, 8) !important;"></i>
+    </button>
+    <h3 class="fw-bold fs-4">Nurse Dashboard</h3>
+  </div>
+</nav>
+
+<div id="mySidebar" #mySidebar class="sidebar">
+<div class="sidebar-header mt-5">
+</div>
+
+<!-- Dashboard -->
+<a routerLink="/nurse/dashboard"><i class="fa-sharp fa-solid fa-grid-horizontal  "></i><span>Dashboard</span></a>
+
+<a routerLink="/nurse/Addmail" > <i class="fa-regular fa-hospital-user  "></i><span>Add Mail</span></a>
+<div class="accordion accordion-flush" style="background-color: white  !important;" id="accordionFlushExample">
+  <div class="accordion-item" style="border: 0 !important;background-color: white ;">
+    <h2 class="accordion-header" style="background-color: white ;" id="flush-headingOne">
+      <button class="accordion-button collapsed" style="margin-left: 5px !important;background-color: white ;" type="button"
+        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+        aria-controls="flush-collapseOne">
+        <i class="fa-light fa-calendar-days "></i> <span style="margin-left: 30px !important;">Resident</span>
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+      data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul class="dropulli" style="width: auto; height: auto !important;">
+          <li><a class="dropdown-item" routerLink="/nurse/view_facesheet_nurse">Face Sheet</a></li>
+          <li><a class="dropdown-item" routerLink="/nurse/view_medsn_nurse" >Meds</a></li>
+          <li><a class="dropdown-item"  routerLink="/nurse/view_caren_nurse" >Care</a></li>
+          <li><a class="dropdown-item" routerLink="/nurse/view_notebooks_nurse" >Notebook</a></li>
+          <li><a class="dropdown-item" routerLink="/nurse/view_docsn_nurse" >Docs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a routerLink="/nurse/documenting_medication"><i class="fa-solid fa-calendar-check "></i> <span>Documenting Medication</span></a>
+<a routerLink="/nurse/narcotic_count"><i class="fa-solid fa-eject "></i><span>Narcotic Drugs Count</span></a>
+<a routerLink="/nurse/ordering_medication"><i class="fa-solid fa-eject "></i><span>Ordering Medication</span></a>
+<a routerLink="/nurse/logging_medication"><i class="fa-solid fa-eject "></i><span>Logging Medication</span></a>
+<a (click)="logouts()" ><i class="fa-solid fa-right-from-bracket  "></i> <span>Logout</span></a>
+</div>
+<div id="main" #main style="background-color: #f4f7fa;">
+<div class="grey-bg container-fluid">
+<router-outlet></router-outlet>
+</div>
+</div>

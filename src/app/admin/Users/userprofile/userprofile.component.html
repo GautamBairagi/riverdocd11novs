@@ -1,0 +1,521 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <nav class="navbar navbar-custom p-2" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h5 text-dark"> <i (click)="cancle()" class="fa-regular fa-arrow-left"></i>  Tasha Hawkins</span>
+            
+            
+                  <div class="d-flex align-items-center">
+                    <!-- Notification Icon -->
+                    <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                      <i  class="fas fa-bell text-dark"></i> <!-- Updated Font Awesome Icon -->
+                    </span>
+            
+                    <!-- Three Dot Menu -->
+                    <div class="dropdown">
+                      <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v text-dark"></i> <!-- Updated Three-Dot Icon -->
+                      </span>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <!-- Offcanvas Notification -->
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification" aria-labelledby="offcanvasNotificationLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+            
+                <div class="offcanvas-body">
+                  <!-- Notification List -->
+                  <div class="notification-item">
+                    <i class="fas fa-envelope notification-icon"></i>
+                    <div class="notification-text">
+                      <strong>New Message</strong><br>
+                      You have received a message from John.
+                    </div>
+                  </div>
+            
+                  <div class="notification-item">
+                    <i class="fas fa-tasks notification-icon"></i>
+                    <div class="notification-text">
+                      <strong>Task Reminder</strong><br>
+                      Complete your daily report by 5 PM.
+                    </div>
+                  </div>
+            
+                  <div class="notification-item">
+                    <i class="fas fa-exclamation-triangle notification-icon"></i>
+                    <div class="notification-text">
+                      <strong>Warning</strong><br>
+                      Your subscription will expire soon. Renew it now.
+                    </div>
+                  </div>
+            
+                  <!-- Add more notification items if needed -->
+                  <div class="offcanvas-footer">
+                    <button class="btn btn-primary archive-button">
+                      <i class="fas fa-archive"></i> Archive All
+                    </button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class=" col-md-6 col-sm-12 mb-3 mb-sm-0">
+                <div class="card">
+                    <h5 class="card-header">Basic Information</h5>
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+                                class="img-fluid w-25" alt="">
+                            <h5>Tasha Hawking <i class="fa-solid fa-user"></i></h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h6>Display Name</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6>Gender</h6>
+                                <span>Female</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>Job Title</h6>
+                                <small>-</small>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>Status</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>Date of Birth</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>SSN</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>Employment Status</h6>
+                                <span>Action</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>HIre Date</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>LIcensing #</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>Email #</h6>
+                                <span>-</span>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <h6>Is Owner </h6>
+                                <span>NO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h5>Phone</h5>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal-1">
+                                        <i class="fa-sharp fa-regular fa-plus"></i>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal-1" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg ">
+                                            <div class="modal-content">
+                                                <div class="modal-header" style="background-color: #ffd740;">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Phone Number
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <form>
+                                                                    <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                                        style="background-color: aliceblue;">phone 1
+                                                                    </h6>
+                                                                    <div class="row mb-3">
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                            <input type="text" class="form-control"
+                                                                                placeholder="Phone Number*"
+                                                                                id="lastName" required>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+                                                                            <select class="form-select"
+                                                                                placeholder="Gender"
+                                                                                aria-label="Default select example">
+                                                                                <option selected>work</option>
+                                                                                <option value="1">phone</option>
+                                                                                <option value="1">Fax</option>
+                                                                                <option value="1">Direct</option>
+                                                                                <option value="2">Office</option>
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault">
+                                                                                <label class="form-check-label"
+                                                                                    for="flexCheckDefault">
+                                                                                    Default checkbox
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+
+
+
+                                                                        <h6 class="py-3 mx-2 fw-bold  text-secondary mt-2"
+                                                                            style="background-color: aliceblue;">Phone 2
+                                                                        </h6>
+
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                            <input type="text" class="form-control"
+                                                                                placeholder="Phone Number*"
+                                                                                id="lastName" required>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+
+
+                                                                            <select class="form-select"
+                                                                                placeholder="Gender"
+                                                                                aria-label="Default select example">
+                                                                                <option selected>work</option>
+                                                                                <option value="1">phone</option>
+                                                                                <option value="1">Fax</option>
+                                                                                <option value="1">Direct</option>
+                                                                                <option value="2">Office</option>
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault">
+                                                                                <label class="form-check-label"
+                                                                                    for="flexCheckDefault">
+                                                                                    Default checkbox
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                            <input type="text" class="form-control"
+                                                                                placeholder="Employee Status"
+                                                                                id="lastName" required>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn rounded-5 px-4 text-light fw-bold"
+                                                        style="background-color: #ffd740">Create</button>
+                                                    <button type="button"
+                                                        class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                        style="border: 1px solid #ffd740; color: #ffd740;"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <div class="alert alert-info" role="alert">
+                                            <i class="fa-sharp fa-regular fa-circle-info"></i> A simple info alert—check
+                                            it out!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mt-4">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h5> Address</h5>
+                               
+                                    <button type="button" class="btn " data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-2">
+                                    <i class="fa-duotone fa-solid fa-pen"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal-2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg ">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color: #ffd740;">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit User Address
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <form>
+                                                             
+                                                                <div class="row mb-3">
+                                                                    <div
+                                                                        class="col-md-12 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Address *"
+                                                                            id="lastName" required>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Address 2*"
+                                                                            id="lastName" required>
+                                                                    </div>
+
+                                                                    <div
+                                                                        class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+                                                                        <input type="text" class="form-control"
+                                                                        placeholder="City *"
+                                                                        id="lastName" required>
+                                                                    </div>
+                                                                    <div
+                                                                    class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+                                                                    <select class="form-select"
+                                                                        placeholder="Gender"
+                                                                        aria-label="Default select example">
+                                                                        <option selected>State</option>
+                                                                        <option value="1">phone</option>
+                                                                        <option value="1">Fax</option>
+                                                                        <option value="1">Direct</option>
+                                                                        <option value="2">Office</option>
+
+                                                                    </select>
+                                                                </div>
+                                                                    <div
+                                                                        class="col-md-6 col-sm-12 col-12 mt-4 mb-1">
+
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" value=""
+                                                                                id="flexCheckDefault">
+                                                                            <label class="form-check-label"
+                                                                                for="flexCheckDefault">
+                                                                               Zipcode
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn rounded-5 px-4  fw-bold"
+                                                    style="background-color: #ffd740">UPDATE</button>
+                                                <button type="button"
+                                                    class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                    style="border: 1px solid #ffd740; color: #ffd740;"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <div class=" ">
+                     
+                                            <ul style="list-style: none; align-items: start;">
+                                                <li>Address</li>
+                                                <li>Address</li>
+                                                <li>Address</li>
+                                                <li>Address</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 mt-4">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h5>Roles</h5>
+                                    <button type="button" class="btn " data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-3">
+                                    <i class="fa-solid fa-dice-d12"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal-3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog  ">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color: #ffd740;">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Manage Groups Memberships                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <form>
+                                                                <div class="form-check d-flex justify-content-between">
+                                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                                        Caregiver 
+                                                                      </label>
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                                  </div>
+                                                                  <div class="form-check  d-flex justify-content-between">
+                                                                      <label class="form-check-label" for="flexRadioDefault2">
+                                                                          Med Tech
+                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                                  </div>
+                                                                  <div class="form-check  d-flex justify-content-between">
+                                                                      <label class="form-check-label" for="flexRadioDefault2">
+                                                                          New Role
+                                                                        </label>
+                                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                                  </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn rounded-5 px-4  fw-bold"
+                                                    style="background-color: #ffd740">UPDATE</button>
+                                                <button type="button"
+                                                    class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                    style="border: 1px solid #ffd740; color: #ffd740;"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <div class="alert alert-warning" role="alert">
+                                            <i class="fa-sharp fa-light fa-square-info"></i> A simple warning
+                                            alert—check it out!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 mt-4">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h5>Groups</h5>
+                                 
+                                    <button type="button" class="btn " data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-4">
+                                    <i class="fa-solid fa-users"></i>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal-4" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg ">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color: #ffd740;">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Manage Groups Memberships                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                 <div class="" style="height: 50vh;">
+
+                                                 </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="modal-footer">
+                                                <button type="submit" class="btn rounded-5 px-4  fw-bold"
+                                                    style="background-color: #ffd740">UPDATE</button>
+                                                <button type="button"
+                                                    class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                    style="border: 1px solid #ffd740; color: #ffd740;"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <div class="alert alert-info" role="alert">
+                                            <i class="fa-sharp fa-regular fa-circle-info"></i> A simple info alert—check
+                                            it out!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   
+ 

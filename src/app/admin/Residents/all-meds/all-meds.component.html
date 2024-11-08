@@ -1,0 +1,103 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <nav class="navbar navbar-custom p-2"
+          style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+          <div class="container-fluid">
+            <span class="navbar-brand mb-0 h5 text-light">Resident Meds</span>
+  
+            <div class="d-flex align-items-center">
+              <!-- Notification Icon -->
+              <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                <i class="fas fa-bell text-light"></i> <!-- Updated Font Awesome Icon -->
+              </span>
+  
+              <!-- Three Dot Menu -->
+              <div class="dropdown">
+                <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v text-light"></i> <!-- Updated Three-Dot Icon -->
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+  
+        <!-- Offcanvas Notification -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+          aria-labelledby="offcanvasNotificationLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+  
+          <div class="offcanvas-body">
+            <!-- Notification List -->
+            <div class="notification-item">
+              <i class="fas fa-envelope notification-icon"></i>
+              <div class="notification-text">
+                <strong>New Message</strong><br>
+                You have received a message from John.
+              </div>
+            </div>
+  
+            <div class="notification-item">
+              <i class="fas fa-tasks notification-icon"></i>
+              <div class="notification-text">
+                <strong>Task Reminder</strong><br>
+                Complete your daily report by 5 PM.
+              </div>
+            </div>
+  
+            <div class="notification-item">
+              <i class="fas fa-exclamation-triangle notification-icon"></i>
+              <div class="notification-text">
+                <strong>Warning</strong><br>
+                Your subscription will expire soon. Renew it now.
+              </div>
+            </div>
+  
+            <!-- Add more notification items if needed -->
+            <div class="offcanvas-footer">
+              <button class="btn btn-primary archive-button">
+                <i class="fas fa-archive"></i> Archive All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  <div class="container ">
+    <div class="row justify-content-center"  *ngFor="let user of residentData">
+  
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <div class="card-custom" routerLink="/admin/resident_meds">
+          <div class="card-header-custom">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-users-medical"></i>
+              <div class="m-2">
+               <!-- <strong>{{admin.image}}</strong>  -->
+              <p>Seroquel (quetiapine) v13 150mg tablet 2</p>
+                <strong>{{ user.firstname }}</strong><br>
+                <small>{{ user.role }}</small>
+              </div>
+            </div>
+            <div class="queue-status">
+              <span><i class="fa-solid fa-ellipsis-vertical mt-2"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  </div>
+

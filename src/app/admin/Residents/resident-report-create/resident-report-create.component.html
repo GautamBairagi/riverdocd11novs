@@ -1,0 +1,429 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: #850F8D; color: white;">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Report</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <!-- Left Section with Reports List and Toggle Switches -->
+                                    <div class="col-md-4 custom-scroll">
+                                        
+                                        <ul class="list-group report-list-group">
+                                            <li class="list-group-item ">
+                                                <div class="dropdown">
+                                                    <button class="btn bg-transparent dropdown-toggle w-100" style="border: 1px solid rgb(175, 175, 175);" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Past  30 Days
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                      <li><a class="dropdown-item" href="#">20 Days</a></li>
+                                                      <li><a class="dropdown-item" href="#">10 Days</a></li>
+                                                      <li><a class="dropdown-item" href="#">5 Days</a></li>
+                                                    </ul>
+                                                  </div>
+                                             </li>
+                                             <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Behavior
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Blood Pressure
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Blood Sugar
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Body Check
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Bowel Movement
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Food
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Mood
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Oxygen
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Position
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Seizure
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Shower
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked> Sleep
+                                              </li> 
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <label>Allergies</label>
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <label>Medical History</label>
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <label>Family and Friends</label>
+                                              </li>
+                                              <li class="alroa2-checkbox-item">
+                                                <input type="checkbox" checked>
+                                                <label>Medical Professionals</label>
+                                              </li>
+                                            <!-- Medication List -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> Medication List</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" data-bs-toggle="collapse"
+                                                        data-bs-target="#medicationList" aria-expanded="false">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="medicationList" class="collapse">
+                                                <div class="card card-body">
+                                                    <p>Details about Medication List</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- PRN Report -->
+                                          
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> PRN Report</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" data-bs-toggle="collapse"
+                                                        data-bs-target="#prnReport" aria-expanded="false">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="prnReport" class="collapse">
+                                                <div class="card card-body">
+                                                    <p>Details about PRN Report</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- MAR Report -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> MAR Report</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" data-bs-toggle="collapse"
+                                                        data-bs-target="#marReport" aria-expanded="false">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="marReport" class="collapse">
+                                                <div class="card card-body">
+                                                    <p>Details about MAR Report</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Manual Med Sheet -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> Manual Med Sheet</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" data-bs-toggle="collapse"
+                                                        data-bs-target="#manualMedSheet" aria-expanded="false">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="manualMedSheet" class="collapse">
+                                                <div class="card card-body">
+                                                    <p>Details about Manual Med Sheet</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- CAR Report -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> CAR Report</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" data-bs-toggle="collapse"
+                                                        data-bs-target="#carReport" aria-expanded="false">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="carReport" class="collapse">
+                                                <div class="card card-body">
+                                                    <p>Details about CAR Report</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Events Report -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> Events Report</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" data-bs-toggle="collapse"
+                                                        data-bs-target="#eventsReport" aria-expanded="false">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="eventsReport" class="collapse">
+                                                <div class="card card-body">
+                                                    <p>Details about Events Report</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Log Report -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span><i class="fas fa-list"></i> Log Report</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" checked data-bs-toggle="collapse"
+                                                        data-bs-target="#logReport" aria-expanded="true">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                            <div id="logReport" class="collapse show">
+                                                <div class="card card-body">
+                                                    <div class="report-range-options mt-3">
+                                                        <label><input type="radio" name="range" value="preset" checked
+                                                                style="accent-color: #850F8D;"> Preset Range</label><br>
+                                                        <label><input type="radio" name="range" value="custom"
+                                                                style="accent-color: #850F8D;"> Custom Range</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <li class="list-group-item ">
+                                                <div class="dropdown">
+                                                    <button class="btn bg-transparent dropdown-toggle w-100" style="border: 1px solid rgb(175, 175, 175);" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                              2024
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                      <li><a class="dropdown-item" href="#">2023</a></li>
+                                                      <li><a class="dropdown-item" href="#">2024</a></li>
+                                                      <li><a class="dropdown-item" href="#">2025</a></li>
+                                                    </ul>
+                                                  </div>
+                                             </li>
+                                             <li class="list-group-item ">
+                                                <div class="dropdown">
+                                                    <button class="btn bg-transparent dropdown-toggle w-100" style="border: 1px solid rgb(175, 175, 175);" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Past  30 Days
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                      <li><a class="dropdown-item" href="#">20 Days</a></li>
+                                                      <li><a class="dropdown-item" href="#">10 Days</a></li>
+                                                      <li><a class="dropdown-item" href="#">5 Days</a></li>
+                                                    </ul>
+                                                  </div>
+                                             </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Right Section with Report Content -->
+                                    <div class="col-md-8">
+                                        <div class="report-content-container">
+                                            <div class="report-content-header">
+                                                <h6>Biography</h6>
+                                            </div>
+                                            <div class="report-content-body">
+                                                <p class="placeholder-text">
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="report-content-header">
+                                                <h6>Medical Services</h6>
+                                            </div>
+                                            <div class="report-content-body">
+                                                <p class="placeholder-text"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn rounded-5 px-4 text-light fw-bold"
+                                    style="background-color: #850F8D;">SAVE</button>
+                                <button type="button" class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                    style="border: 1px solid #850F8D; color: #850F8D;"
+                                    data-bs-dismiss="modal">CANCEL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS for Switch and Borders -->
+                <style>
+                    .switch input {
+                        display: none;
+                    }
+
+                    .switch {
+                        width: 40px;
+                        height: 20px;
+                        background-color: green;
+                        border-radius: 20px;
+                        position: relative;
+                        transition: 0.3s;
+                    }
+
+                    .switch input:checked+.slider {
+                        background-color: #850F8D;
+                    }
+
+                    .switch .slider::before {
+                        content: '';
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        background-color: white;
+                        border-radius: 50%;
+                        top: 2px;
+                        left: 2px;
+                        transition: 0.3s;
+                    }
+
+                    .switch input:checked+.slider::before {
+                        transform: translateX(20px);
+                    }
+
+                    .list-group-item {
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                    }
+
+                    .report-range-options input[type="radio"] {
+                        accent-color: #850F8D;
+                    }
+
+                    .modal-footer button {
+                        border-radius: 30px;
+                    }
+
+                    .alroa2-dropdown-menu {
+                        padding: 10px;
+                    }
+
+                    .alroa2-dropdown-label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .alroa2-dropdown-label input {
+                        margin-right: 10px;
+                    }
+
+                    .alroa2-dropdown-container {
+                        margin-top: 50px;
+                    }
+
+                    .alroa2-dropdown-button {
+                        background-color: #007bff;
+                        color: white;
+                        border-radius: 5px;
+                        padding: 10px;
+                    }
+                </style>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <nav class="navbar navbar-custom p-2"
+                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h5 text-white"> Resident Report </span>
+                        <div class="d-flex align-items-center">
+                            <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                                <i class="fas fa-bell"></i>
+                            </span>
+
+                            <div class="dropdown">
+                                <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </span>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="main">
+        <div class="container" style="margin-top: 4rem;">
+            <div class="mx-auto d-flex justify-content-center align-items-center flex-column"
+                style="height: 60vh; background-color: #ADB1B4;">
+                <img src="https://i.ibb.co/HVDP4M4/image.png" alt="">
+                <p class="text-center">There are no User Group based on your filtering criteria.</p>
+            </div>
+            <!-- button-code   -->
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn rounded-circle m-2 set_btn" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalToggle"><i class="fa-sharp fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+        <!-- Offcanvas Notification -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+            aria-labelledby="offcanvasNotificationLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <!-- Notification List -->
+                <div class="notification-item">
+                    <i class="fas fa-envelope notification-icon"></i>
+                    <div class="notification-text">
+                        <strong>New Message</strong><br>
+                        You have received a message from John.
+                    </div>
+                </div>
+
+                <div class="notification-item">
+                    <i class="fas fa-tasks notification-icon"></i>
+                    <div class="notification-text">
+                        <strong>Task Reminder</strong><br>
+                        Complete your daily report by 5 PM.
+                    </div>
+                </div>
+
+                <div class="notification-item">
+                    <i class="fas fa-exclamation-triangle notification-icon"></i>
+                    <div class="notification-text">
+                        <strong>Warning</strong><br>
+                        Your subscription will expire soon. Renew it now.
+                    </div>
+                </div>
+
+                <!-- Add more notification items if needed -->
+                <div class="offcanvas-footer">
+                    <button class="btn btn-primary archive-button">
+                        <i class="fas fa-archive"></i> Archive All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="login-form">
+        <div class="login-form-fields">
+            <div class="login-input-group">
+                <div class="name-password-login-button">
+                    <div class="user-icon">
+                        <!-- <i class="fa-solid fa-user"></i> -->
+                        <!-- <img class="img-fluid" src="../../assets/homecare-removebg-preview.png" alt=""> -->
+                        <!-- <img class="img-fluid" src="../../assets/homecare-removebg-preview.png" alt="" style="width: 500px; height: auto;"> -->
+                        <img class="img-fluid large-image" src="../../assets/homecare-removebg-preview.png" alt="">
+                    </div>
+                    <form [formGroup]="loginForm">
+                        <div class="name">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" formControlName="email" id="user-name" placeholder="Email">
+                        </div>
+                        <div class="password">
+                            <i class="fa-solid fa-lock"></i>
+                            <input [type]="showPassword ? 'text' : 'password'" formControlName="password" id="user-password"
+                                placeholder="Password" />
+                            <i class="fa-solid" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+                                (click)="togglePasswordVisibility()" style="cursor: pointer"></i>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-primary mx-auto" [disabled]="loginForm.invalid || loading" style="width: 300px;" (click)="addPatients()">
+                                <ng-container *ngIf="loading; else buttonText">
+                                    <i class="fa-solid fa-spinner fa-spin"></i> Logging in...
+                                </ng-container>
+                                <ng-template #buttonText>Log In</ng-template>
+                            </button>
+                            <button (click)="onChanges('admin')" type="button" class="btn btn-primary mx-auto" style="width: 300px;">Admin</button>
+                            <!-- <button (click)="onChanges('prescriber')" type="button" class="btn btn-primary mx-auto" style="width: 300px;">Prescriber / Nurse</button> -->
+                            <!-- <button (click)="onChanges('patient')" type="button" class="btn btn-primary mx-auto" style="width: 300px;">Patient</button> -->
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="button" routerLink="/landing" class="btn btn-primary " >Back</button>
+                        <button type="button" routerLink="/register" class="btn btn-primary  ">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

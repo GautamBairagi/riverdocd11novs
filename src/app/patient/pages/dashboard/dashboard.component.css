@@ -1,0 +1,14 @@
+.card-header {
+    background-color: white ;
+    ;
+    color: white;
+}
+
+.card-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}

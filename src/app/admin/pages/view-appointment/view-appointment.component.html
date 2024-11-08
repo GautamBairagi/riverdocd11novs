@@ -1,0 +1,47 @@
+<section id="minimal-statistics">
+    <div class="container mt-5">
+        <h2 style="font-weight:500; margin-bottom: 20px;margin-top: 5rem;">All Appointment</h2>
+        <div class="mb-4">
+            <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">View
+                appointment details</h4>
+        </div>
+        <!-- Patient List Table -->
+        <div class="mt-5 responsive-table">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover mt-3">
+                    <thead style="background-color: white ; color: white; white-space: nowrap;">
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Appointment From</th>
+                            <th>Appointment To</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody style="white-space: nowrap;">
+                        <tr>
+                        <tr *ngFor="let appoint of allAppointmentData;let i = index">
+                            <td>{{ appoint.residentName }}</td>
+                            
+                            <td>{{ appoint.title }}</td>
+                            <td>{{ appoint.description }}</td>
+                            <td>{{ appoint.date }}</td>
+                            <td>{{ appoint.appointmentTimeFrom }}</td>
+                            <td>{{ appoint.appointmentTimeTo }}</td>
+                            <td>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

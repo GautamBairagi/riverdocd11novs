@@ -1,0 +1,83 @@
+.card-custom {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-header-custom .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.order-status {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+.queue-status {
+    background-color: #00bfff;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+}
+.med-status {
+    display: flex;
+    align-items: center;
+}
+.med-status span {
+    margin-right: 8px;
+}
+.med-status a {
+    color: #c82333;
+    font-size: 0.85em;
+    text-decoration: none;
+}
+
+.badge {
+    background-color: #e23da3;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+
+.nav-tabs .nav-link.active {
+    color: white;
+    border-bottom: 2px solid #d11f87;
+}
+
+.basic-info-section {
+    margin-top: 20px;
+    padding-left: 70px;
+}
+
+.basic-info-section strong {
+    display: inline-block;
+    width: 150px;
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .basic-info-section strong {
+        width: 120px;
+    }
+    .basic-info-section {
+    margin-top: 20px;
+    padding-left: 0px !important;
+}
+}

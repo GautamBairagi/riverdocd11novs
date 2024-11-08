@@ -1,0 +1,371 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <nav class="navbar navbar-custom p-2"
+        style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h5 text-white">Medication Tasks</span>
+
+          <div class="d-flex align-items-center">
+            <!-- Notification Icon -->
+            <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+              <i class="fas fa-bell"></i> <!-- Updated Font Awesome Icon -->
+            </span>
+
+            <!-- Three Dot Menu -->
+            <div class="dropdown">
+              <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i> <!-- Updated Three-Dot Icon -->
+              </span>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Offcanvas Notification -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+        aria-labelledby="offcanvasNotificationLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <!-- Notification List -->
+          <div class="notification-item">
+            <i class="fas fa-envelope notification-icon"></i>
+            <div class="notification-text">
+              <strong>New Message</strong><br>
+              You have received a message from John.
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <i class="fas fa-tasks notification-icon"></i>
+            <div class="notification-text">
+              <strong>Task Reminder</strong><br>
+              Complete your daily report by 5 PM.
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <i class="fas fa-exclamation-triangle notification-icon"></i>
+            <div class="notification-text">
+              <strong>Warning</strong><br>
+              Your subscription will expire soon. Renew it now.
+            </div>
+          </div>
+
+          <!-- Add more notification items if needed -->
+          <div class="offcanvas-footer">
+            <button class="btn btn-primary archive-button">
+              <i class="fas fa-archive"></i> Archive All
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="container">
+
+
+  <ul class="nav nav-tabs mt-2" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="true">ROUTINE</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+        role="tab" aria-controls="profile-tab-pane" aria-selected="false">PRN</button>
+    </li>
+
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mt-3">
+            <h5 class="mb-2 mt-2 mx-1">Group By</h5>
+            <button type="button" class="btn rounded-4  text-light  fw-bold px-4" style="background-color: #850F8D;"><i
+                class="fa-light fa-clock"></i> Time</button>
+            <button type="button" class="btn btn-secondary text-light px-4 rounded-4 ms-2"
+              style="background-color: #f8f9fa; border: 1px soild black;"><i class="fa-regular fa-user"></i>
+              RESIDENT</button>
+          </div>
+          <div class="col-md-4 text-end mt-5">
+            <i class="fa-sharp fa-solid fa-eye text-info fw-bold"></i>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-8 mt-3 mb-2">
+            <div class="card border-0"
+              style="box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; border-radius: 20px 20px 0px 0px;">
+              <div class="card-body">
+                <h5>All Day</h5>
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Check Blood Pressure</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">John Adams</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4"></div>
+          <div class="col-md-8 mt-3 mb-2">
+            <div class="card border-0"
+              style="box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; border-radius: 20px 20px 0px 0px;">
+              <div class="card-body">
+                <h5>6:00 AM</h5>
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Shower</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">Mike Johanson</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4"></div>
+          <div class="col-md-8 mt-3 mb-2">
+            <div class="card border-0"
+              style="box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; border-radius: 20px 20px 0px 0px;">
+              <div class="card-body">
+                <h5>7:00 AM</h5>
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Blood Pressure</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">Linda Harper</span>
+                  </p>
+                </div>
+
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Bowel Movement</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">Linda Harper</span>
+                  </p>
+                </div>
+
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Meal Intake</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">Linda Harper</span>
+                  </p>
+                </div>
+
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Oxygen Level</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">Linda Harper</span>
+                  </p>
+                </div>
+                <div class="d-flex justify-content-start">
+                  <p class="mt-3"><i class="fa-regular fa-circle-check text-secondary" style="font-size: 22px;"></i></p>
+                  <p class="mx-5">
+                    <span class="fs-5 fw-semibold">Skin Check</span> <br>
+                    <span class="fs-6 text-secondary fw-bolder">Linda Harper</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn  rounded-circle m-2 set_btn" data-bs-toggle="modal"
+              data-bs-target="#givePRNModalsss"><i class="fa-sharp fa-solid fa-plus"></i></button>
+          </div>
+
+          <div class="modal fade" id="givePRNModalsss" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel" style="color:  #850F8D;">  Adding New Medication (MAR) </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h2 class="Adding" style=" font-weight:500; margin-bottom: 20px; font-size: 28px;"> 
+                    Adding New Medication (MAR) </h2>
+                    <!-- General Information -->
+                  <div class="mb-4">
+                    <h4 style="background-color:  #850F8D ; color: white; padding: 10px; border-radius: 5px;" class="shadow">(MAR)</h4>
+                    <form>
+                      <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                          <label for="firstName" style="font-weight: bold;">Medication Name </label>
+                          <input type="text" class="form-control mt-2" id="firstName" placeholder="Medication Name ">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="dob" style="font-weight: bold;"> RX Number </label>
+                          <input type="text" class="form-control mt-2" id="dob" placeholder="RX Number">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="lastName" style="font-weight: bold;">Frequency of Medication </label>
+                          <input type="text" class="form-control mt-2" id="lastName" placeholder="Frequency of Medication">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="lastName" style="font-weight: bold;">Medication Unit</label>
+                          <input type="text" class="form-control mt-2" id="lastName" placeholder="Medication Unit">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="dob" style="font-weight: bold;">Manufacturing Date </label>
+                          <input type="date" class="form-control mt-2" id="dob">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="dob" style="font-weight: bold;">Expiry Date Refills </label>
+                          <input type="date" class="form-control mt-2" id="dob">
+                        </div>
+                      
+                       
+                        <div class="col-md-6 text-end">
+                          <button type="submit" class="btn mt-5" style="background-color:  #850F8D ; color: white;">Add Patient</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn text-light fw-bold w-100" style="background-color:  #850F8D ;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+      <div id="main">
+        <div class="container" style="margin-top: 5rem;">
+
+          <div class="container mt-5">
+            <!-- Button trigger modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="givePRNModal" tabindex="-1" aria-labelledby="givePRNModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="givePRNModalLabel">Give PRN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form  [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                      <!-- Resident Dropdown -->
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label for="resident" class="form-label">Resident*</label>
+                          <select class="form-select unique-select" id="resident" formControlName="resident" >
+                            <option value="" selected disabled>Select Resident</option>
+                            <option value="1">Resident 1</option>
+                            <option value="2">Resident 2</option>
+                          </select>
+                        </div>
+
+                        <!-- PRN Medication Dropdown -->      
+ 
+                        <div class="col mb-3">
+                          <label for="prnMedication" class="form-label">PRN Medication*</label>
+                          <select class="form-select unique-select" id="prnMedication" formControlName="prnMedication" >
+                            <option value="" selected disabled>Select Medication</option>
+                            <option value="med1">Medication 1</option>
+                            <option value="med2">Medication 2</option>
+                          </select>
+                        </div>
+
+                      </div>
+
+
+                      <!-- Reason Textbox -->
+                      <div class="mb-3">
+                        <label for="reason" class="form-label">Reason*</label>
+                        <textarea class="form-control unique-textarea" id="reason" rows="3" formControlName="reason" ></textarea>
+                      </div>
+
+                      <!-- Date and Time -->
+                      <div class="row mb-3">
+                        <div class="col-sm-6">
+                          <label for="givenDate" class="form-label">Given Date</label>
+                          <input type="date" class="form-control unique-input" id="givenDate" formControlName="giveDate" >
+                        </div>
+                        <div class="col-sm-6">
+                          <label for="givenTime" class="form-label">Given Time</label>
+                          <input type="time" class="form-control unique-input" id="givenTime"  formControlName="giveTime">
+                        </div>
+                      </div>
+                      <!-- Given By Dropdown -->
+                      <div class="mb-3">
+                        <label for="givenBy" class="form-label">Given By</label>
+                        <select class="form-select unique-select" id="givenBy" formControlName="givenBy" >
+                          <option value="1" selected>Tasha Hawkins</option>
+                        </select>
+                      </div>
+
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary unique-btn" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn  unique-btn" >Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr  style="background-color: #850F8D; color: white;"> 
+                  <th>Resident</th>
+                  <th>PRN Medication</th>
+                  <th>Give Date</th>
+                  <th>Reason</th>
+                  <th>Give Time</th>
+                  <th>Given By</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let admin of  getgetappointmentsgets">
+                  <td>{{admin.resident}}</td>
+                  <td>{{admin.prnMedication}}</td>
+                  <td>{{admin.giveDate}}</td>
+                  <td>{{admin.reason}}</td>
+                  <td>{{admin.giveTime}}</td>
+                  <td>{{admin.givenBy}}</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- button-code   -->
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn  rounded-circle m-2 set_btn" data-bs-toggle="modal"
+              data-bs-target="#givePRNModal"><i class="fa-sharp fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

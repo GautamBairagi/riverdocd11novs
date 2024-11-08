@@ -1,0 +1,49 @@
+
+.navbar-custom {
+    background-color: #850F8D;
+}
+
+.nav-item {
+    color: white;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.offcanvas-header {
+    background-color: #850F8D;
+    color: white;
+}
+
+.notification-icon {
+    font-size: 40px;
+    color: #03a9f4;
+    margin-right: 10px;
+}
+
+.archive-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.offcanvas-footer {
+    padding-bottom: 15px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-item:hover {
+    background-color: #f0f0f0;
+}
+
+.notification-text {
+    font-size: 14px;
+}

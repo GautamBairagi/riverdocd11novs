@@ -1,0 +1,125 @@
+
+
+<div class="container mt-4">
+    <h2 style="font-weight:500; margin-bottom: 20px;"> Add Notes  </h2>
+ 
+  <!-- General Information -->
+  <div class="mb-4">
+    <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Daily Notes</h4>
+    <form>
+      <div class="row g-3 mt-2">
+   
+        <div class="col-md-6">  
+          <label for="name" style="font-weight: bold;">Nurse Notes</label>
+          <input type="text" class="form-control mt-2" id="name" placeholder="Enter Name"formControlName="notes">
+        </div>
+        <div class="col-md-6">
+          <label for="name" style="font-weight: bold;">Patient Name</label>
+          <input type="text" class="form-control mt-2" id="name" placeholder="Enter Name"formControlName="patientName">
+        </div>
+            <div class="col-md-6">
+              <label for="" style="font-weight: bold;">Shift</label>
+              <select class="form-select mt-2" id="" aria-placeholder="" formControlName="shift" >
+              
+                <option>AM Shift</option>
+                <option>PM Shift</option>
+                <option>Mid Day Shifts</option>
+                <option>Night Shifts</option>
+                <option> NOC Shifts</option>
+              </select>
+            </div> 
+  
+    
+      </div>
+      <div class="float-end d-flex grid gap-3">
+          <button type="button" class="btn float-end " style="background-color: white ; color: white; font-weight: bold;">Submit</button>
+          <button type="button" class="btn float-end " style="background-color: white ; color: white; font-weight: bold;">close</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+  <!-- Patient List Table -->
+  <div class="mt-5 responsive-table mt-4">
+    <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;"> List</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover mt-3">
+        <thead style="background-color: white ; color: white; white-space: nowrap;">
+          <tr>
+            <th>#</th>
+            <th>Nuser Notes</th>
+            <th>Patient Name</th>
+            <th>Shift</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <!-- <tbody style="white-space: nowrap;">
+          
+              <tr *ngFor="let admin of getpriscriber; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{admin.patientName}}</td>
+            <td>{{admin.shift}}</td>
+            <td>{{admin.notes}}</td>
+            <td>
+              <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                <i class="fas fa-trash"></i>
+              </span>
+              <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                <i class="fas fa-edit"></i>
+              </span>
+            </td>
+          </tr>
+        </tbody> -->
+
+
+
+        <tbody style="white-space: nowrap;">
+          <!-- Check if API data is available -->
+          <ng-container *ngIf="getpriscriber && getpriscriber.length > 0; else showStaticData">
+            <tr *ngFor="let admin of getpriscriber; let i = index">
+              <td>{{ i+1 }} </td>
+              <td>{{ admin.notes }}</td>
+              <td>{{ admin.patientName}}</td>
+              <td>{{ admin.shift }}</td>
+             
+              <td>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                  <i class="fas fa-trash"></i>
+                </span>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                  <i class="fas fa-edit"></i>
+                </span>
+              </td>
+            </tr>
+          </ng-container>
+        
+          <!-- Define static data if API data is not available -->
+          <ng-template #showStaticData>
+            <tr>		
+              <td>1</td>
+              <td>this is a note</td>
+              <td>shivam</td>
+              <td>day shift</td>
+              <td>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                  <i class="fas fa-trash"></i>
+                </span>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                  <i class="fas fa-edit"></i>
+                </span>
+              </td>
+            </tr>
+            <!-- You can add more static rows here if needed -->
+          </ng-template>
+        </tbody>
+
+
+        
+      </table>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

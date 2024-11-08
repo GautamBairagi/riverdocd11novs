@@ -1,0 +1,111 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <nav class="navbar navbar-custom p-2" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 0rem;">
+          <div class="container-fluid">
+            <span class="navbar-brand mb-0 h5 text-white">Care Tasks </span>
+      
+            <div class="d-flex align-items-center">
+              <!-- Notification Icon -->
+              <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                <i class="fas fa-bell"></i> <!-- Updated Font Awesome Icon -->
+              </span>
+      
+              <!-- Three Dot Menu -->
+              <div class="dropdown">
+                <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v"></i> <!-- Updated Three-Dot Icon -->
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      
+        <!-- Offcanvas Notification -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification" aria-labelledby="offcanvasNotificationLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+      
+          <div class="offcanvas-body">
+            <!-- Notification List -->
+            <div class="notification-item">
+              <i class="fas fa-envelope notification-icon"></i>
+              <div class="notification-text">
+                <strong>New Message</strong><br>
+                You have received a message from John.
+              </div>
+            </div>
+      
+            <div class="notification-item">
+              <i class="fas fa-tasks notification-icon"></i>
+              <div class="notification-text">
+                <strong>Task Reminder</strong><br>
+                Complete your daily report by 5 PM.
+              </div>
+            </div>
+      
+            <div class="notification-item">
+              <i class="fas fa-exclamation-triangle notification-icon"></i>
+              <div class="notification-text">
+                <strong>Warning</strong><br>
+                Your subscription will expire soon. Renew it now.
+              </div>
+            </div>
+      
+            <!-- Add more notification items if needed -->
+            <div class="offcanvas-footer">
+              <button class="btn btn-primary archive-button">
+                <i class="fas fa-archive"></i> Archive All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="container mt-5">
+    
+          <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-block w-100 text-center">
+                    <h5 style="color: white;">MONDAY , October 07,2024</h5>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-block w-100 text-center">
+                    <h5 style="color: white;">TUESDAY , October 08,2024</h5>
+                    <p></p>
+                  </div>
+                </div>
+               
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"  >Next</span>
+              </button>
+          </div>
+      
+  </div>
+  
+ 

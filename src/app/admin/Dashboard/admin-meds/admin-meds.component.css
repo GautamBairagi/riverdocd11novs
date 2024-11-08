@@ -1,0 +1,94 @@
+.modal-header {
+    background-color: #850F8D;
+    color: white;
+    border-bottom: none;
+}
+
+/* Button Style */
+.unique-btn {
+    background-color: #850F8D;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.unique-btn:hover {
+  background-color: #850F8D;}
+
+/* Input Fields */
+.unique-input,
+.unique-select,
+.unique-textarea {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
+/* Submit and Cancel Button */
+.unique-btn {
+    background-color: #850F8D;
+    border-color: #850F8D;
+    color: white;
+}
+
+/* Focus Input Style */
+.unique-input:focus,
+.unique-select:focus,
+.unique-textarea:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 189, 242, 0.25);
+    border-color: #850F8D;
+}
+
+
+.navbar-custom {
+    background-color: #850F8D;
+  }
+
+  .nav-item {
+    color: white;
+  }
+
+  .nav-item:hover {
+    cursor: pointer;
+  }
+
+  .offcanvas-header {
+    background-color: #850F8D;
+    color: white;
+  }
+
+  .notification-icon {
+    font-size: 40px;
+    color: #850F8D;
+    margin-right: 10px;
+  }
+
+  .archive-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offcanvas-footer {
+    padding-bottom: 15px;
+  }
+
+  .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .notification-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  .notification-text {
+    font-size: 14px;
+  }
+  .offcanvas{
+    margin-top: 70px;
+  }

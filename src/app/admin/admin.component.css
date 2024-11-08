@@ -1,0 +1,356 @@
+:root {
+    --primary-color:  #850F8D;
+    --bg-color: #f4f7fa;
+    --text-color: #333;
+    --sidebar-bg: #ffffff;
+    --sidebar-hover: #e6f0ff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* background-color: var(--sidebar-bg); */
+    background-color: white ;
+    color: #000;
+    overflow-x: hidden;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar-header {
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: auto;
+    margin-left: 80px !important;
+}
+
+.toggle-btn:hover {
+    color: var(--primary-color);
+}
+
+.toggle-btn2 {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+}
+
+.toggle-btn2:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+    .toggle-btn {
+        display: none;
+    }
+
+    .toggle-btn2 {
+        display: block !important;
+    }
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+.accordion-button{
+    font-size: 15px !important;
+}
+.sidebar a:hover {
+    background-color: var(--sidebar-hover);
+    color: var(--primary-color);
+}
+
+.sidebar a i {
+    min-width: 30px;
+    font-size: 20px;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 0px;
+    padding-top: 10px;
+    margin-left: 250px;
+}
+
+.sidebar.closed {
+    width: 70px;
+}
+
+.sidebar.closed .sidebar-header h3 {
+    display: none;
+}
+
+.sidebar.closed a span {
+    display: none;
+}
+
+.sidebar.closed~#main {
+    margin-left: 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .sidebar .sidebar-header h3 {
+        display: none;
+    }
+
+    .sidebar a span {
+        display: none;
+    }
+
+    #main {
+        margin-left: 0px;
+    }
+
+    .sidebar.open {
+        width: 250px;
+    }
+
+    .sidebar.open .sidebar-header h3 {
+        display: block;
+    }
+
+    .sidebar.open a span {
+        display: inline;
+    }
+
+    /* .sidebar.open~#main {
+        margin-left: 250px;
+    } */
+}
+
+.manus ul {
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 5px !important;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: none !important;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.sidebar i {
+    font-weight: 300;
+    font-size: 24px !important;
+}
+
+.sidebar span {
+    margin-left: 20px !important;
+    font-weight: 300;
+}
+
+
+.sidebar .manus a .dropdown1 {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+
+}
+
+.accordion-button:not(.collapsed) {
+    color: #101414 !important;
+    background-color: #e9f8f8;
+    border: 0 !important;
+}
+.accordion-button{
+    font-weight: 600 !important;
+}
+.dropulli li a {
+    font-size: 14px !important;
+}
+
+.dropulli li a:hover {
+    background: transparent !important;
+}
+
+
+.Iosbtn {
+    border: 1px solid  #850F8D !important;
+    color:  #850F8D !important;
+}
+
+.Iosbtn:hover {
+    border: 0;
+    color: white !important;
+    background-color:  #850F8D;
+}
+.agendas-content h4{
+    font-size: 21px;
+}
+.agendas-content p {
+    font-size: 14px;
+}
+input{
+
+    outline-color:  #850F8D !important;
+}
+
+span{
+    font-weight: 600 !important;
+}
+.dropdown-item{
+    font-weight: 600 !important;
+}
+/* General Styles */
+.unique-opening-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .unique-opening-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+  }
+  
+  .unique-opening-schedule-card,
+  .unique-opening-holiday-card {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+  }
+  
+  /* Table Styles */
+  .unique-opening-time-select {
+    width: 100px;
+  }
+  
+  .unique-opening-remove-shift, .unique-opening-add-shift {
+    text-decoration: none;
+  }
+  
+  .unique-opening-remove-shift i,
+  .unique-opening-add-shift i {
+    margin-right: 0.5rem;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list-group-item button i {
+    margin-right: 0.5rem;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .unique-opening-schedule-card,
+    .unique-opening-holiday-card {
+      padding: 1rem;
+    }
+  
+    .unique-opening-time-select {
+      width: 100%;
+    }
+  }
+  
+ thead{
+  white-space: nowrap;
+  }
+
+  tbody{
+    white-space: nowrap;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  .sidecolour{
+    color: #850F8D;
+
+  }
+
+
+  /* .custom-accordion-button:focus,
+.custom-accordion-button[aria-expanded="true"] {
+    background-color: #f0f0f0 !important; 
+    color: #000 !important; 
+}
+
+.custom-link:focus,
+.custom-link:active {
+    background-color: #f0f0f0 !important; 
+    color: #850F8D !important;
+}
+
+.custom-link:hover {
+    background-color: #e0e0e0 !important;
+    color: #850F8D !important;
+} */
+
+
+/* Change background and text color when an accordion button is active */
+.custom-accordion-button:focus,
+.custom-accordion-button[aria-expanded="true"] {
+    background-color: #e7cfe9 !important; /* Change the background color */
+    color: #9b049b !important; /* Change the text color */
+}
+
+/* Change the background and text color for the link when clicked */
+.custom-link:focus,
+.custom-link:active {
+
+    /* ffadcca5 */
+    background-color: #e7cfe9 !important; /* Change the background color */
+    color: #850F8D !important; /* Change the text color */
+}
+
+/* Optional: Add hover effects */
+.custom-link:hover {
+    background-color: #f6daf3 !important;
+    color: #850F8D !important;
+}

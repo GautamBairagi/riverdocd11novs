@@ -1,0 +1,128 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="modal fade mx-auto" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #850F8D;">
+                        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">New Destruction Method</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mb-3">
+                            <div class="col-md-12 col-sm-12 mt-3 mb-1">
+                                <input type="text" class="form-control" placeholder=" Name*" id="firstName" required>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mt-3 mb-1">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn rounded-5 px-4 text-light fw-bold"
+                            style="background-color: #850F8D;">CREATE</button>
+                        <button type="button" class="btn bg-transparent rounded-5 px-4 fw-bold"
+                            style="border: 1px solid red; color:red" data-bs-dismiss="modal">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <nav class="navbar navbar-custom p-2"
+        style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h5 text-white">Medication Destruction Methods
+        </span>
+          <div class="d-flex align-items-center">
+            <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+              <i class="fas fa-bell"></i> 
+            </span>
+  
+            <div class="dropdown">
+              <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i> 
+              </span>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  </div>
+  
+  
+      <div id="main">
+        <div class="container" style="margin-top: 4rem;">
+          <div class="mx-auto d-flex justify-content-center align-items-center flex-column"
+            style="height: 60vh; background-color: #ADB1B4;">
+            <img src="https://i.ibb.co/HVDP4M4/image.png" alt="">
+            <p class="text-center">There are no User Group based on your filtering criteria.</p>
+          </div>
+          <!-- button-code   -->
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn rounded-circle m-2 set_btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              ><i class="fa-sharp fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+          <!-- Offcanvas Notification -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+      aria-labelledby="offcanvasNotificationLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+  
+      <div class="offcanvas-body">
+        <!-- Notification List -->
+        <div class="notification-item">
+          <i class="fas fa-envelope notification-icon"></i>
+          <div class="notification-text">
+            <strong>New Message</strong><br>
+            You have received a message from John.
+          </div>
+        </div>
+  
+        <div class="notification-item">
+          <i class="fas fa-tasks notification-icon"></i>
+          <div class="notification-text">
+            <strong>Task Reminder</strong><br>
+            Complete your daily report by 5 PM.
+          </div>
+        </div>
+  
+        <div class="notification-item">
+          <i class="fas fa-exclamation-triangle notification-icon"></i>
+          <div class="notification-text">
+            <strong>Warning</strong><br>
+            Your subscription will expire soon. Renew it now.
+          </div>
+        </div>
+  
+        <!-- Add more notification items if needed -->
+        <div class="offcanvas-footer">
+          <button class="btn btn-primary archive-button">
+            <i class="fas fa-archive"></i> Archive All
+          </button>
+        </div>
+      </div>
+        </div>
+      </div>
+  
+    

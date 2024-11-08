@@ -1,0 +1,310 @@
+
+  <div class="container mt-4">
+      <h2 style="font-weight:500; margin-bottom: 20px;"> Add Mail  </h2>
+   
+    <!-- General Information -->
+    <div class="mb-4">
+      <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Add Mail</h4>
+     
+
+
+
+
+      <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+    <div>
+        
+    </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-8"></div>
+            <div class="col-md-4 col-lg-4 mt-4">
+    <div class="d-flex justify-content-end">
+        <!-- <button class="btn btn-info fw-bold text-light border-0  mx-1"
+        style="background-color: #428BCA !important;">Folder <i class="fa-solid fa-folder"></i></button> -->
+    <button type="button" class="btn mx-2  fw-bold" style="background-color:  #9585BF ; color: white;" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Compose <i class="fa-solid fa-envelope-circle-check"></i> </button>
+    
+    </div>
+                
+    
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header " style="background-color: #428BCA;">
+                                <h5 class="modal-title" style="color: white;" id="exampleModalLabel">Email</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-2">
+                                <form action="" class="container" [formGroup]="myForm">
+                                    <div class=" row">
+                                        <div class="col-lg-2">
+                                            <label  for="">From</label>
+                                        </div>  
+                                        
+                                        
+                                       
+                                        <div class="col-md- ms-auto">
+                                            <input type="text" formControlName="fromMail" class="form-control" readonly
+                                                [ngClass]="{'is-invalid': myForm.controls['fromMail'].errors && ck }"
+                                                id="from">
+                                            <p class="text-danger" *ngIf="myForm.controls['fromMail'].errors && ck">From is
+                                                required
+                                            </p>
+                                        </div>
+    
+                                    </div>
+                                    <div class="row mt-3"  >
+    
+                                        <div class="col-md-6">
+                                            <label for="inputState" class="form-label">To</label>
+                                            <input type="text" formControlName="toMail" class="form-control" placeholder="example@gmail.com"
+                                            [ngClass]="{'is-invalid': myForm.controls['toMail'].errors && ck }"
+                                            id="to">
+                                            <p class="text-danger" *ngIf="myForm.controls['toMail'].errors && ck">To 
+                                                required
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputState" class="form-label">Upload Your Face Sheet </label>
+                                            <input type="file" formControlName="pdf" class="form-control" placeholder="pdf"
+                                            [ngClass]="{'is-invalid': myForm.controls['pdf'].errors && ck }"
+                                            id="to">
+                                            <p class="text-danger" *ngIf="myForm.controls['pdf'].errors && ck">pdf 
+                                                required
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="formGroupExampleInput" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject"
+                                            formControlName="subject"
+                                            [ngClass]="{'is-invalid': myForm.controls['subject'].errors && ck }"
+                                            id="subject">
+                                        <p class="text-danger" *ngIf="myForm.controls['subject'].errors && ck">Subject is
+                                            required
+                                        </p>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Messages:</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message"
+                                            formControlName="message"
+                                            [ngClass]="{'is-invalid': myForm.controls['message'].errors && ck }"
+                                            id="message" rows="3"></textarea>
+                                        <p class="text-danger" *ngIf="myForm.controls['message'].errors && ck">Message is
+                                            required
+                                        </p>
+                                    </div>
+    
+            
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit"  class="btn-close" data-bs-dismiss="modal" aria-label="Close" class="btn  btn-outline-secondary" (click)="onSubmit()">Send</button>
+                                <button data-bs-dismiss="modal" type="button"
+                                    class="btn  btn-outline-secondary">close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    
+    
+        <div class="col-md-12">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <!-- <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true"> <i class="fa-solid fa-inbox"></i> <br>Sent</button> -->
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false"> <i style="color: orange;" class="fa-solid fa-paper-plane"></i> <br>Sent</button>
+    
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                    tabindex="0">
+                    <div class=" border d-flex p-2 gap-1 ">
+                        <input type="checkbox">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+    
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <p class="mx-auto"><span>Inbox</span> (0 Unread messages)</p>
+                    </div>
+                    <div class="border ">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead >
+                                    <tr style="color: rgb(19, 62, 62) !important" >
+                                       <th></th>
+                                        <th style="color: rgb(134, 135, 136)" >From</th>
+                                        <th style="color: rgb(134, 135, 136)">To Mail</th>
+                                        <th style="color: rgb(134, 135, 136)">Subject</th>
+                                        
+                                        <th style="color: rgb(134, 135, 136)">Patient Face Sheet</th>
+                                        <th style="color: rgb(134, 135, 136)">Message</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let admin of getpriscriber; let i = index" >
+                                        <td> <input type="checkbox"> </td>
+                                        <td  style="color: #428BCA;"> {{admin.fromMail}} </td>
+                                        <td> {{admin.toMail}} </td> 
+                                        <td> {{admin.subject}} </td> 
+
+
+                                        <td>
+                                            <div>
+                                              <button type="button" class="btn" data-bs-toggle="modal" (click)="adminById(admin.id)" data-bs-target="#docModal"  style="color: #438eb9;"> <i class="fa-solid fa-id-card"></i>
+                                                 
+                                              </button>
+                                          
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="docModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Patient Face Sheet</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <button type="button" class="btn btn-primary" (click)="downloadPdf(adminByIdData.pdf)">
+                                                            Download Patient Face Sheet
+                                                          </button>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                          
+                                                      <!-- Download Button -->
+                                                      <!-- <button type="button" class="btn btn-primary" >
+                                                        Download License
+                                                      </button> -->
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+
+                                        <!-- <td> {{admin.pdf}} </td>  -->
+                                        <td> {{admin.message}} </td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 bg-light p-3">
+                        <span class="p-3" style="color: black;"> messages total
+                        </span>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+
+    </div>
+    </div>
+  
+
+    <!-- Patient List Table -->
+    <div class="mt-5 responsive-table">
+      <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;"> List</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mt-3">
+          <thead style="background-color: white ; color: white; white-space: nowrap;">
+            <tr>
+              <th>#</th>
+              <th>Nurse Notes</th>
+              <th>Patient Name</th>
+              <th>Shift</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <!-- <tbody style="white-space: nowrap;">
+            
+                <tr *ngFor="let admin of getpriscriber; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{admin.patientName}}</td>
+              <td>{{admin.shift}}</td>
+              <td>{{admin.notes}}</td>
+              <td>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                  <i class="fas fa-trash"></i>
+                </span>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                  <i class="fas fa-edit"></i>
+                </span>
+              </td>
+            </tr>
+          </tbody> -->
+
+
+
+          <tbody style="white-space: nowrap;">
+            <!-- Check if API data is available -->
+            <ng-container *ngIf="getpriscriber && getpriscriber.length > 0; else showStaticData">
+              <tr *ngFor="let admin of getpriscriber; let i = index">
+                <td>{{ i+1 }} </td>
+                <td>{{ admin.notes }}</td>
+                <td>{{ admin.patientName}}</td>
+                <td>{{ admin.shift }}</td>
+               
+                <td>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                </td>
+              </tr>
+            </ng-container>
+          
+            <!-- Define static data if API data is not available -->
+            <ng-template #showStaticData>
+              <tr>		
+                <td>1</td>
+                <td>this is a note</td>
+                <td>shivam</td>
+                <td>day shift</td>
+                <td>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                  <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                </td>
+              </tr>
+              <!-- You can add more static rows here if needed -->
+            </ng-template>
+          </tbody>
+
+
+          
+        </table>
+      </div>
+    </div>
+  </div>
+

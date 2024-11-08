@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm navbar-dark navbar-fixed-top sh"
+  style="background-color: white ; color: rgb(27, 18, 18); height: 70px; z-index: 1050 !important;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/Home.html">
+      <img src="../../assets/homecare-removebg-preview.png"            style="width: 70px;" alt="">
+    </a>
+    <span class="fw-bold fs-4">Home Care</span>
+
+    <button class="toggle-btn2" style="margin-left: 100px !important;" (click)="toggleNav()">
+      <i class="fas fa-bars" style="color: rgb(26, 10, 10) !important"></i>
+    </button>
+
+    <div class="collapse" id="mynavbar">
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+    
+    <button class="toggle-btn" (click)="toggleNav()">
+      <i class="fas fa-bars" style="color: rgb(19, 8, 8) !important;"></i>
+    </button>
+  </div>
+</nav>
+
+<div id="mySidebar" #mySidebar class="sidebar">
+<div class="sidebar-header mt-5">
+</div>
+
+<!-- Dashboard -->
+<!-- <a routerLink="/admin/home"><i class="fa-sharp fa-solid fa-grid-horizontal  text-info"></i><span>Home</span></a> -->
+<a routerLink="/patient/dashboard"><i class="fa-sharp fa-solid fa-grid-horizontal  "></i><span>Dashboard</span></a>
+
+<a routerLink="/patient/my_nurse" > <i class="fa-regular fa-hospital-user  "></i><span>My Nurse</span></a>
+
+
+<a (click)="logouts()"><i class="fa-solid fa-right-from-bracket  "></i> <span>Logout</span></a>
+
+</div>
+
+
+<div id="main" #main style="background-color: #f4f7fa;">
+<div class="grey-bg container-fluid">
+<router-outlet></router-outlet>
+</div>
+</div>

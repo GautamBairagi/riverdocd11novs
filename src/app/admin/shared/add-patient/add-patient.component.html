@@ -1,0 +1,118 @@
+<section id="minimal-statistics">
+  <form [formGroup]="patientAddForm" (ngSubmit)="addPatient()">
+    <div class="container">
+        <h2 style="font-weight:500; margin-bottom: 20px;  margin-top:5rem ;"> Add Patient</h2>
+        <!-- General Information -->
+        <div class="mb-4">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">General Information</h4>
+          
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label for="name" style="font-weight: bold;">Patient Name</label>
+                <input type="text" class="form-control mt-2" id="name" formControlName="name" placeholder="Enter first name">
+              </div>
+             
+              <div class="col-md-6">
+                <label for="dob" style="font-weight: bold;">Date of Birth</label>
+                <input type="date" class="form-control mt-2" formControlName="dateofBirth" id="dob">
+              </div>
+              <div class="col-md-6">
+                <label for="gender" style="font-weight: bold;" >Gender</label>
+                <select class="form-select mt-2" id="gender" formControlName="gender">
+                  <option selected>Choose...</option>
+                  <option value="Male" >Male</option>
+                  <option value="Female" >Female</option>
+                  <option value="Other" >Other</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="doctorName" style="font-weight: bold;">Doctor Name</label>
+                <input type="text" class="form-control mt-2" formControlName="doctorName" id="doctorName" placeholder="Enter doctor name" >
+              </div>
+              <div class="col-md-6">
+                <label for="medications" style="font-weight: bold;">Medications</label>
+                <input type="text" class="form-control mt-2" formControlName="medications" id="medications" placeholder="Enter medications" >
+              </div>
+             
+              
+            </div>
+         
+        </div>
+    
+        <!-- Medical Information -->
+        <div class="mb-4">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Medical Information</h4>
+         
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label for="bloodType" style="font-weight: bold;">Blood Type</label>
+                <select class="form-select mt-2" id="bloodType" formControlName="bloodGroup">
+                  <option selected>Choose...</option>
+                  <option>A+</option>
+                  <option>O+</option>
+                  <option>B+</option>
+                  <option>AB+</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="weight" style="font-weight: bold;">Weight</label>
+                <input type="text" class="form-control mt-2" formControlName="weight" id="weight" placeholder="Enter weight">
+              </div>
+              <div class="col-md-6">
+                <label for="height" style="font-weight: bold;">Height</label>
+                <input type="text" class="form-control mt-2" formControlName="height" id="height" placeholder="Enter height">
+              </div>
+              <div class="col-md-6">
+                <label for="allergies" style="font-weight: bold;">Allergies</label>
+                <input type="text" class="form-control mt-2" formControlName="allergies" id="allergies" placeholder="Enter allergies">
+              </div>
+              <div class="col-md-6">
+                <label for="eyeColor" style="font-weight: bold;">Eye Color</label>
+                <input type="text" class="form-control mt-2" formControlName="eyeColor" id="eyeColor" placeholder="Enter Eye Color">
+              </div>
+              <div class="col-md-6">
+                <label for="Behavior  " style="font-weight: bold;">Behavior  </label>
+                <input type="text" class="form-control mt-2" formControlName="Behavior  " id="Behavior  " placeholder="Enter Behavior  ">
+              </div>
+              
+              <div class="col-12">
+                <label for="medicalHistory" style="font-weight: bold;">Medical Condition</label>
+                <textarea class="form-control mt-2" formControlName="medicalConditions" id="medicalHistory" rows="3" placeholder="Enter medical condition"></textarea>
+              </div>
+            </div>
+         
+        </div>
+    
+        <!-- Contact Details -->
+        <div class="mb-4">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Contact Details</h4>
+         
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label for="phone" style="font-weight: bold;">Phone Number</label>
+                <input type="text" class="form-control mt-2" formControlName="contact" id="phone" placeholder="Enter phone number">
+              </div>
+              <div class="col-md-6">
+                <label for="email" style="font-weight: bold;">Email Address</label>
+                <input type="email" class="form-control mt-2" formControlName="email" id="email" placeholder="Enter email address">
+              </div>
+              <div class="col-md-6">
+                <label for="password" style="font-weight: bold;">Password</label>
+                <input type="text" class="form-control mt-2" formControlName="password" id="password" placeholder="Enter password" >
+              </div>
+              <div class="col-12">
+                <label for="address" style="font-weight: bold;">Facility Name</label>
+                <textarea class="form-control mt-2" id="facilityName" formControlName="facilityName" rows="2" placeholder="Enter facility name"></textarea>
+              </div>
+            </div>
+         
+        </div>
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" class="btn" style="background-color: white ; color: white;">Add Patient</button>
+        </div>
+    
+       
+      </div>
+    </form>
+  </section>

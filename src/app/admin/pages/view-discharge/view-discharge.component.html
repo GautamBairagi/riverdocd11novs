@@ -1,0 +1,45 @@
+<section id="minimal-statistics">
+    <div class="container mt-5">
+        <h2 style="font-weight:500; margin-bottom: 20px;margin-top: 20px;">All Appointment</h2>
+        <div class="mb-4">
+            <h4 style="background-color: white; color: white; padding: 10px; border-radius: 5px;" class="shadow">View
+                appointment details</h4>
+        </div>
+        <!-- Patient List Table -->
+        <div class="mt-5 responsive-table">
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover mt-3">
+                    <thead style="background-color: white; color: white; white-space: nowrap;">
+                        <tr>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Discharge Reason</th>
+                            <th>Relocate To</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody style="white-space: nowrap;">
+                        <tr>
+                        <tr *ngFor="let appoint of allDischargeData;let i = index">
+
+                            <td>{{ appoint.residentName }}</td>
+                            <td>{{ appoint.Date }}</td>
+                            <td>{{ appoint.dischargeReason }}</td>
+                            <td>{{ appoint.relocateTo }}</td>
+                            <td>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: white;">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

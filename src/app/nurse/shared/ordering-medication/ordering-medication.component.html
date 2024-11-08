@@ -1,0 +1,92 @@
+<div id="main">
+    <div class="container mt-4">
+  
+        <div class="mb-4">
+          <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Ordering Medication</h4>
+          <form>
+            <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                    <label for="dob" style="font-weight: bold;">Prescriber Name</label>
+                    <input type="name" class="form-control mt-2" id="name">
+                  </div>
+              <div class="col-md-4">
+                <label for="firstName" style="font-weight: bold;">Medication Name</label>
+                <input type="date" class="form-control mt-2" id="name" placeholder="Enter name">
+              </div>
+              <div class="col-md-4">
+                <label for="lastName" style="font-weight: bold;">Date of Manufacture</label>
+                <input type="date" class="form-control mt-2" id="lastName" placeholder="Enter date">
+              </div>
+              
+              <div class="col-md-4">
+                <label for="date" style="font-weight: bold;">Date of Expiry</label>
+                <input type="date" class="form-control mt-2" id="date">
+              </div>
+              <div class="col-md-4">
+                <label for="" style="font-weight: bold;">Quantity</label>
+                <input type="name" class="form-control mt-2" id="">
+              </div>
+              <div class="col-md-4">
+                <label for="" style="font-weight: bold;">Unit</label>
+                <input type="name" class="form-control mt-2" id="">
+              </div>
+              <div class="col-md-4">
+                <label for="" style="font-weight: bold;">Frequency of Medication</label>
+                <input type="name" class="form-control mt-2" id="">
+              </div>
+              <div class="col-md-4">
+                <label for="" style="font-weight: bold;">Date</label>
+                <input type="date" class="form-control mt-2" id="">
+              </div>
+             
+              <div class="float-end"><button type="button" class="btn float-end" style="background-color: white ; color: white; font-weight: bold;">Submit</button></div>
+              
+              <!-- Patient List Table -->
+        <div class="mt-5 responsive-table">
+            <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;">List</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover mt-3">
+                <thead style="background-color: white ; color: white; white-space: nowrap;">
+                  <tr>
+                    <th>#</th>
+                    <th>Prescriber Name</th>
+                    <th>Medication Name</th>
+                    <th>Date of Manufacture</th>
+                    <th>Date of Expiry</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Frequency of Medication</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="white-space: nowrap;">
+                  <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Aciloc</td>
+                    <td>1990-05-01</td>
+                    <td>1925-05-01</td>
+                    <td>20</td>
+                    <td>25</td>
+                    <td>1-2-3</td>
+                    <td>2024-09-28</td>
+                    <td>
+                      <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                        <i class="fas fa-trash"></i>
+                      </span>
+                      <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                        <i class="fas fa-edit"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <!-- Add more patient rows here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>

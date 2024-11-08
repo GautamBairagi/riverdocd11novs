@@ -1,0 +1,219 @@
+<div id="main">
+<div class="container mt-5">
+    <div class="row" style="margin-top: 4rem;">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1 text-light" style="background-color: #850F8D;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+            <h4>Facility Profile</h4> 
+        </div>
+        
+    </div>
+    <div class="row" style="margin-top: 2rem;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">GENERAL</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">ROOMS</button>
+            </li>
+          
+          </ul>
+          <div class="tab-content text-success" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+        
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <div class="card">
+                                <div class="card-header" style="color: #850F8D;">
+                                    Basic Information <span style="float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal2" ><i class="fa-solid fa-pencil"></i></span>
+                                  </div>
+                                <div class="card-body">
+                                  
+                                  <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Home of Comfort</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Display Name</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Facility #</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Capacity</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Facility Type</td>
+                                                <td>ARF</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Regional Office</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address</td>
+                                                <td>CA / US </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone #</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+
+
+
+
+
+                        <!-- model  -->
+                        <div>
+                            <!-- Button trigger modal -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-lg ">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #850F8D;">
+                                            <h1 class="modal-title text-white fs-5" id="exampleModalLabel">Edit Facility
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <form>
+                                                        <h6 class="py-3 mx-2 fw-bold  text-secondary" style="background-color: aliceblue;">
+                                                            Basic information</h6>
+                                                        <div class="row mb-3">
+                                                            <div class="col-md-6 col-sm-12 mt-3 mb-1">
+                                                                <input type="text" class="form-control" placeholder="Facility Name*"
+                                                                    id="firstName" required>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                <input type="number" class="form-control" placeholder="Display Name*"
+                                                                    id="firstName" required>
+                                                            </div>
+                    
+                                                            <div class="col-md-6 col-sm-12 mt-3 mt-1 mb-1">
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected>ARF</option>
+                                                                    <option value="1"></option>
+                                                                    <option value="2">fe</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12  mt-3 mb-2">
+                                                                <input type="date" class="form-control" placeholder="Facility License #"
+                                                                    id="" required>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                <input type="text" class="form-control" placeholder="Capablity*" id=""
+                                                                    required>
+                                                            </div>
+                    
+                                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected>Regionl Office </option>
+                                                                    <option value="1">one</option>
+                                                                    <option value="2">two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                    
+                                                        </div>
+                                                        <!-- start Address Section  -->
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                                    style="background-color: aliceblue;">Address Info</h6>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <input type="text" class="form-control" placeholder="Address Line 1"
+                                                                        id="" required>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <input type="text" class="form-control" placeholder="Address Line 2"
+                                                                        id="" required>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <input type="text" class="form-control" placeholder="City" id=""
+                                                                        required>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>State</option>
+                                                                        <option value="1">California</option>
+                                                                        <option value="2">two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <input type="password" class="form-control" placeholder="ZipCode" id=""
+                                                                        required>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <input type="text" class="form-control" placeholder="Hospice Agency "
+                                                                        id="" required>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>Country</option>
+                                                                        <option value="1">one</option>
+                                                                        <option value="2">two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                    
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                                    style="background-color: aliceblue;">Phone information</h6>
+                                                                <div class="col-md-12 col-sm-12 mt-3 mb-1 text-center">
+                                                                    <button type="button" class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                                        style="border: 1px solid #850F8D; color:#850F8D">ADD PHONE</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                    
+                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn rounded-5 px-4 text-light fw-bold"
+                                                style="background-color: #850F8D;">UPDATE</button>
+                                            <button type="button" class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                style="border: 1px solid #850F8D; color:#850F8D" data-bs-dismiss="modal">CANCEL</button>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+           
+          </div>
+    </div>
+    </div>
+</div>

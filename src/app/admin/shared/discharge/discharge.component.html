@@ -1,0 +1,61 @@
+<section id="minimal-statistics">
+  <div class="container mt-2">
+    <!-- Discharge Resident Form -->
+    <div class="mb-4">
+      <h2 style="font-weight:500; margin-bottom: 20px; margin-top:5rem ;">Discharge Resident</h2>
+      <h4 style="background-color: white; color: white; padding: 10px; border-radius: 5px;" class="shadow">Discharge
+        Information</h4>
+      <form [formGroup]="dischargeForm" (ngSubmit)="addDisharge()" >
+        <div class="row g-3 mt-2">
+          <!-- Resident Name -->
+          <div class="col-md-6">
+            <label for="residentName" style="font-weight: bold;">Resident Name</label>
+              <select formControlName="residentName"  class="form-select mt-2" >
+                <option value="" hidden>Select</option>
+                <option *ngFor="let p of allPatientData" [value]="p.name">{{ p.name }}</option>
+              </select>
+          </div>
+
+          <!-- Discharge Reason Dropdown (Death or Relocation) -->
+          <div class="col-md-6">
+            <label for="dischargeReason" style="font-weight: bold;">Discharge Reason</label>
+            <select class="form-select mt-2" formControlName="dischargeReason" (change)="toggleHealthcareDropdown()">
+              <option value="" disabled selected>Select discharge reason</option>
+              <option value="death">Death</option>
+              <option value="relocation">Relocation to Other Health Care</option>
+            </select>
+          </div>
+
+          <div class="col-md-6" *ngIf="showRelocationField">
+            <label for="relocationHealthcare" style="font-weight: bold;">Relocation Healthcare</label>
+            <input type="text" id="relocationHealthcare" class="form-control mt-2" formControlName="relocateTo"
+              placeholder="Enter healthcare details">
+          </div>
+
+          <div class="col-md-6" id="healthcareDropdown" style="display: none;">
+            <label for="healthcareName" style="font-weight: bold;">Health Care Name</label>
+            <select class="form-select mt-2" id="healthcareName">
+              <option value="" disabled selected>Select health care</option>
+              <option value="Healthcare A">Healthcare A</option>
+              <option value="Healthcare B">Healthcare B</option>
+              <option value="Healthcare C">Healthcare C</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+
+          <!-- Date of Discharge -->
+          <div class="col-md-6">
+            <label for="dischargeDate" style="font-weight: bold;">Date</label>
+            <input type="date" class="form-control mt-2" formControlName="Date" id="dischargeDate">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-4">
+          <button type="submit" class="btn" style="background-color: white; color: white;">Submit Discharge</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,205 @@
+
+
+
+<nav class="navbar navbar-expand-sm navbar-dark navbar-fixed-top  fixed-top sh"
+  style="background-color: white ; color: rgb(27, 18, 18); height: 70px; z-index: 1050 !important;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/Home.html">
+      <img src="../../assets/homecare-removebg-preview.png" style="width: 70px;" alt="">
+    </a>
+    <span class="sidecolour  fw-bold fs-4">Home Care</span>
+
+    <button class="toggle-btn2" style="margin-left: 100px !important;" (click)="toggleNav()">
+      <i class="fas fa-bars" style="color: rgb(26, 10, 10) !important"></i>
+    </button>
+
+    <div class="collapse" id="mynavbar">
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+
+    <button class="toggle-btn" (click)="toggleNav()">
+      <i class="fas fa-bars" style="color: rgb(19, 8, 8) !important;"></i>
+    </button>
+
+  </div>
+</nav>
+
+<div id="mySidebar" #mySidebar class="sidebar">
+  <div class="sidebar-header mt-5">
+  </div>
+
+ <!-- <div class="accordion accordion-flush" style="background-color: white  !important;" id="accordionFlushExample">
+    <div class="accordion-item" style="border: 0 !important;background-color: white ;">
+      <h2 class="accordion-header" style="background-color: white ;" id="flush-headingOne">
+        <button class="accordion-button collapsed" style="margin-left: 5px !important;background-color: white ;"
+          type="button" data-bs-toggle="collapse" data-bs-target="#flush-overview" aria-expanded="false"
+          aria-controls="flush-overview">
+          <i class="sidecolour fa-solid fa-gauge-high"></i><span style="margin-left: 30px !important;">Dashboard</span>
+        </button>
+      </h2>
+      <div id="flush-overview" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="dropulli" style="width: auto; height: auto !important;">
+            <li><a class="dropdown-item custom-link" routerLink="/admin/dashboard_overview">Overview</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/dashboard_meds">Meds</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/dashboard_care">Care</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/dashboard_notebook">Notebook</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/dashboard_ordering">Ordering</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  -->
+
+
+
+  <div class="accordion accordion-flush" style="background-color: white !important;" id="accordionFlushExample">
+    <div class="accordion-item" style="border: 0 !important;background-color: white;">
+        <h2 class="accordion-header" style="background-color: white;" id="flush-headingOne">
+            <button class="accordion-button collapsed custom-accordion-button" style="margin-left: 5px !important;background-color: white;" 
+                type="button" data-bs-toggle="collapse" data-bs-target="#flush-overview" aria-expanded="false" 
+                aria-controls="flush-overview">
+                <i class="sidecolour fa-solid fa-gauge-high"></i>
+                <span style="margin-left: 30px !important;">Dashboard</span>
+            </button>
+        </h2>
+        <div id="flush-overview" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <ul class="dropulli" style="width: auto; height: auto !important;">
+                    <li><a class="dropdown-item custom-link custom-link" routerLink="/admin/dashboard_overview">Overview</a></li>
+                    <li><a class="dropdown-item custom-link custom-link" routerLink="/admin/dashboard_meds">Meds</a></li>
+                    <li><a class="dropdown-item custom-link custom-link" routerLink="/admin/dashboard_care">Care</a></li>
+                    <li><a class="dropdown-item custom-link custom-link" routerLink="/admin/dashboard_notebook">Notebook</a></li>
+                    <li><a class="dropdown-item custom-link custom-link" routerLink="/admin/dashboard_ordering">Ordering</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="accordion accordion-flush mt-2" style="background-color: white  !important;" id="accordionFlushExample">
+    <div class="accordion-item" style="border: 0 !important;background-color: white ;">
+      <h2 class="accordion-header" style="background-color: white ;" id="flush-headingOne">
+        <button class="accordion-button collapsed custom-accordion-button" style="margin-left: 5px !important;background-color: white ;"
+          type="button" data-bs-toggle="collapse" data-bs-target="#flush-Resident" aria-expanded="false"
+          aria-controls="flush-Resident">
+          <i class="sidecolour fa-solid fa-bed-pulse"></i> <span style="margin-left: 30px !important;">Resident</span>
+        </button>
+      </h2>
+      <div id="flush-Resident" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">  
+         
+          <ul class="dropulli" style="width: auto; height: auto !important;">
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_list">List</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_group">Group</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_facesheet_list">Facesheet</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/all_meds">Meds</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_care">Care</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_notebook">Notebook</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_docs">Docs</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/resident_note">Reports</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion accordion-flush mt-2" style="background-color: white  !important;" id="accordionFlushExample">
+    <div class="accordion-item" style="border: 0 !important;background-color: white ;">
+      <h2 class="accordion-header" style="background-color: white ;" id="flush-headingOne">
+        <button class="accordion-button collapsed custom-accordion-button" style="margin-left: 5px !important;background-color: white ;"
+          type="button" data-bs-toggle="collapse" data-bs-target="#flush-Users" aria-expanded="false"
+          aria-controls="flush-Users">
+          <i class="sidecolour fa-solid fa-users"></i> <span style="margin-left: 30px !important;">Users</span>
+        </button>
+      </h2>
+      <div id="flush-Users" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="dropulli" style="width: auto; height: auto !important;">
+            <li><a class="dropdown-item custom-link" routerLink="/admin/users_list">Lists</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/users_group">Groups</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="custom-link" routerLink="/admin/communication" ><i class="sidecolour fa-solid fa-comments"></i><span>Communication</span></a>
+
+  <div class="accordion accordion-flush mt-2" style="background-color: white  !important;" id="accordionFlushExample">
+    <div class="accordion-item" style="border: 0 !important;background-color: white ;">
+      <h2 class="accordion-header" style="background-color: white ;" id="flush-headingOne">
+        <button class="accordion-button collapsed custom-accordion-button" style="margin-left: 5px !important;background-color: white ;"
+          type="button" data-bs-toggle="collapse" data-bs-target="#flush-Documents" aria-expanded="false"
+          aria-controls="flush-Documents">
+          <i  class="sidecolour sidecolour fa-solid fa-folder-plus"></i> <span style="margin-left: 30px !important;">Documents</span>
+        </button>
+      </h2>
+      <div id="flush-Documents" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="dropulli" style="width: auto; height: auto !important;">
+            <li><a class="dropdown-item custom-link" routerLink="/admin/docs_overview">Overview</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/docs_library">Library</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion accordion-flush mt-2" style="background-color: white  !important;" id="accordionFlushExample">
+    <div class="accordion-item" style="border: 0 !important;background-color: white ;">
+      <h2 class="accordion-header" style="background-color: white ;" id="flush-headingOne">
+        <button class="accordion-button collapsed custom-accordion-button " style="margin-left: 5px !important;background-color: white ;"
+          type="button" data-bs-toggle="collapse" data-bs-target="#flush-Configuration" aria-expanded="false"
+          aria-controls="flush-Configuration">
+          <i class="fa-regular sidecolour  fa-screwdriver-wrench"></i> <span style="margin-left: 30px !important;">SetUp</span>
+        </button>
+      </h2>
+      <div id="flush-Configuration" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul class="dropulli" style="width: auto; height: auto !important;">
+            <li><a class="dropdown-item custom-link" routerLink="/admin/config_profile">Profile</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/config_contacts">Contacts</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/config_lists">Lists</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/config_roles">Roles</a></li>
+            <li><a class="dropdown-item custom-link" routerLink="/admin/config_settings">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<hr style="margin-top: 25%;">
+  <a routerLink="/admin/categories/selfcare"><i class="fa-regular sidecolour  fa-hospital-user"></i><span>Self-care/Home Care</span></a>
+  <a routerLink="/admin/categories/communication"><i class="sidecolour fa-solid fa-comment-medical"></i><span>Communication</span></a>
+  <a routerLink="/admin/categories/community_social_involment"><i class="sidecolour fa-solid fa-users-rays"></i><span>Community and Social <br> Involvement</span>  </a>
+  <a routerLink="/admin/categories/work_carrier_education"><i class="sidecolour fa-solid fa-briefcase"></i><span>Work/Career/Education</span></a>
+  <a routerLink="/admin/categories/tranportation"><i class="sidecolour fa-solid fa-truck-medical"></i><span>Transportation</span></a>
+  <a routerLink="/admin/categories/personal_emotional_growth"><i class="sidecolour fa-solid fa-person-circle-plus"></i><span>Personal and Emotional <br> Growth</span></a>
+  <a routerLink="/admin/categories/safety"><i class="sidecolour fa-solid fa-user-shield"></i><span>Safety</span></a>
+  <a routerLink="/admin/categories/healthMedical"><i class="sidecolour fa-solid fa-hospital"></i><span>Health/Medical</span></a>
+  <a routerLink="/admin/categories/epsdt"><i class="sidecolour fa-solid fa-flask-vial"></i><span>EPSDT</span></a>
+  <a routerLink="/admin/categories/dental"><i class="sidecolour fa-solid fa-tooth"></i><span>Dental</span></a>
+  <a routerLink="/admin/categories/currentMedication"><i class="sidecolour fa-solid fa-pills"></i><span>Current Medications</span></a>
+  <a routerLink="/admin/categories/currentProvider"><i class="sidecolour fa-solid fa-user-nurse"></i><span>Current Providers</span></a>
+
+
+  <a (click)="logouts()"><i class="sidecolour fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+
+</div>
+
+
+<div id="main" #main style="background-color: #f4f7fa;">
+  <!-- <div class="grey-bg container-fluid"> -->
+    <router-outlet></router-outlet>
+  <!-- </div> -->
+</div>

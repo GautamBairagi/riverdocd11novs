@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+.offcanvas{
+    margin-top: 70px !important;
+}
+.set_btn{
+    position: fixed;
+    right: 28px !important;
+    bottom: 35px !important;
+    background-color: #850F8D !important;
+    border: none;
+    color: white;
+  }
+.set_btn:hover{
+    background-color: #850F8D !important;
+}
+  .navbar-custom {
+    background-color: #850F8D !important;
+  }
+  .unique-btn{
+    background-color: #850F8D;
+    color: white;
+  }
+
+  .thead{
+    white-space: nowrap !important;
+  }
+  .tbody{
+     white-space: nowrap !important;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 4px;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #850F8D; 
+  border-radius: 6px;
+}

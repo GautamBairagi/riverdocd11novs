@@ -1,0 +1,234 @@
+<div class="container mt-5">
+
+  <div class="row" style="margin-top: 4rem;">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-1"
+      style="background-color: #850F8D;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+      <h4 class="text-light">Contacts</h4>
+    </div>
+
+  </div>
+  <div class="row" style="margin-top: 2rem;">
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          Pharmacies <span style="float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
+              class="fa-solid fa-plus"></i></span>
+        </div>
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          Medical Professionals <span style="float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+              class="fa-solid fa-plus"></i></span>
+        </div>
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #850F8D; ">
+            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: white;" >New Medical professional</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="myForm2">
+              <div class="row g-3">
+                <h6>Basic information</h6>
+                <div class="col-sm-12">
+                  <select class="form-select" aria-label="Default select example" formControlName="basicInfo">
+                    <option value="">type *</option>
+                    <option >One</option>
+                    <option >Two</option>
+                    <option >Three</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="First Name  *" aria-label=""
+                    formControlName="firstname">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="Last Name *" aria-label=""
+                    formControlName="lastname">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <input type="email" class="form-control" placeholder="Email Address *" aria-label=""
+                    formControlName="email">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="Speciality *" aria-label=""
+                    formControlName="speciality">
+                </div>
+                <h6>Phone information heading</h6>
+                <div class=" col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="Phone number *" aria-label=""
+                    formControlName="phone">
+                </div>
+
+                <h6>Address info heading</h6>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="Address Line 1 *" aria-label=""
+                    formControlName="addressOne">
+                </div>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="Address Line 2 *" aria-label=""
+                    formControlName="addressTwo">
+                </div>
+                <!-- <div class="col-sm-12">
+                  <input type="text" class="form-control" placeholder="country *" aria-label="" formControlName="basicInfo">
+                </div>  -->
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="country *" aria-label=""
+                    formControlName="country">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="city *" aria-label="" formControlName="city">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="state *" aria-label="" formControlName="state">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <input type="text" class="form-control" placeholder="Zipcode *" aria-label=""
+                    formControlName="zipCode">
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn  rounded-pill" style="border: 1px solid #850F8D;"
+              (click)="onSubmitmedical()">CREATE</button>
+            <button type="button" class="btn text-white rounded-pill" data-bs-dismiss="modal"
+              style="background-color: red;">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #06B043;">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New Pharmacy</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="myForm">
+            <div class="row g-3">
+              <h6>Basic information</h6>
+              <div class="col-sm-12">
+                <input type="text" class="form-control" formControlName="basicInfo" placeholder="To"
+                  aria-label="Pharmacy Name *">
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Checked checkbox
+                </label>
+              </div>
+              <div class="col-sm-12">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email Address *"
+                  aria-label="">
+              </div>
+              <h6>Phone information heading</h6>
+
+              <div class="col-sm-12">
+                <input type="text" class="form-control" formControlName="phone" placeholder="phone1" aria-label="">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn  rounded-pill" style="border: 1px solid #06B043;"
+                  (click)="onSubmit()">CREATE</button>
+                <button type="button" class="btn text-white rounded-pill" data-bs-dismiss="modal"
+                  style="background-color: #06B043;"> CANCEL</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead style="white-space: nowrap; background-color: #850F8D; color: white;">
+            <tr>
+              <th>Basic Information</th>
+              <th>Email</th>
+              <th>Phone Information </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let admin of getgetpharmacys">
+              <td>{{admin.basicInfo}}</td>
+              <td>{{admin.email}}</td>
+              <td>{{admin.email}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead style="white-space: nowrap; background-color: #850F8D; color: white;">
+            <tr>
+              <th>Basic information</th>
+              <th>First Name</th>
+              <th>Last name</th>
+              <th>Email</th>
+              <th>Speciality</th>
+              <th>Phone</th>
+              <th>
+                Address One
+              </th>
+              <th>Country</th>
+              <th>State</th>
+              <th>City</th>
+              <th>ZipCode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let admins of getmedicalprofessional ">
+              <td>{{admins.lastname}} </td>
+              <td> {{admins.email}}</td>
+              <td> {{admins.speciality}}</td>
+              <td> {{admins.phone}}</td>
+              <td> {{admins.addressOne}}
+              </td>
+              <td> {{admins. addressTwo}}
+              </td>
+              <td> {{admins.country}}
+              </td>
+              <td> {{admins.state}}
+              </td>
+              <td> {{admins.city}}
+              </td>
+              <td> {{admins.zipCode}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

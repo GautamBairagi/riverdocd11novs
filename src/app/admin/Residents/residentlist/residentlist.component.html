@@ -1,0 +1,649 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: #850F8D;">
+                            <h1 class="modal-title fs-5 text-white" id="exampleModalToggleLabel">Create New Resident
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form [formGroup]="residentForm" (ngSubmit)="addResident()">
+                                        <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                            style="background-color: aliceblue;">
+                                            Basic Info</h6>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4 col-sm-12 mt-3 mb-1">
+                                                <label for="">First Name</label>
+                                                <input type="text" class="form-control" formControlName="firstname"
+                                                    placeholder="First Name*" id="firstName" required>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Phone Number</label>
+                                                <input type="tel" class="form-control" formControlName="phone"
+                                                    placeholder="Phone Number*" id="firstName" required>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Last Name</label>
+                                                <input type="text" class="form-control" formControlName="lastname"
+                                                    placeholder="Last Name*" id="firstName" required>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mt-1 mb-1">
+                                                <label for="">Gender</label>
+                                                <select class="form-select" formControlName="gender"
+                                                    aria-label="Default select example">
+                                                    <option selected>Gender*</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12  mt-3 mb-2">
+                                                <label for="">Date</label>
+                                                <input type="date" class="form-control" formControlName="date"
+                                                    placeholder="" id="" required>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">SSN</label>
+                                                <input type="text" class="form-control" formControlName="ssn"
+                                                    placeholder="SSN*" id="" required>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Religion Name</label>
+                                                <input type="text" class="form-control" formControlName="religionName"
+                                                    placeholder="Religion Name*" id="" required>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Primary Language</label>
+                                                <select class="form-select" formControlName="primaryLanguage"
+                                                    aria-label="Default select example">
+                                                    <option selected>Primary Language</option>
+                                                    <option value="english">English</option>
+                                                    <option value="spanish">Spanish</option>
+                                                    <option value="chinese">Chinese</option>
+                                                    <option value="tagalog">Tagalog</option>
+                                                    <option value="vietnamese">Vietnamese</option>
+                                                    <option value="french">French</option>
+                                                    <option value="arabic">Arabic</option>
+                                                    <option value="korean">Korean</option>
+                                                    <option value="german">German</option>
+                                                    <option value="russian">Russian</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Resident Number</label>
+                                                <input type="tel" class="form-control" formControlName="residentPhone"
+                                                    placeholder="Resident Phone*" id="" required>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Eye Color</label>
+                                                <select class="form-select" formControlName="eyeColor"
+                                                    aria-label="Default select example">
+                                                    <option selected>Eye Color</option>
+                                                    <option value="brown">Brown</option>
+                                                    <option value="blue">Blue</option>
+                                                    <option value="hazel">Hazel</option>
+                                                    <option value="green">Green</option>
+                                                    <option value="gray">Gray</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Height Unit</label>
+                                                <select class="form-select" formControlName="heightUnit" aria-label="Default select example">
+                                                    <option selected>select height unit</option>
+                                                    <option value="feet">Feet</option>
+                                                    <option value="inches">Inches </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Feet</label>
+                                                <input type="text" class="form-control" formControlName="feet" placeholder="Feet*" id=""
+                                                    required>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Inches</label>
+                                                <input type="text" class="form-control" formControlName="inches" placeholder="Inches " id=""
+                                                    required>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 mt-3 mb-1 ">
+                                                <label for="">Biography</label>
+                                                <textarea class="form-control" formControlName="biography" id="exampleFormControlTextarea1" rows="3"
+                                                    placeholder="Biography"></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- <button class="btn text-white mb-3" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal" style="background-color: #850F8D;">
+                                            Add Pharmacy</button> -->
+
+                                        <!-- Add pharmacy button ============================================================== -->
+
+
+                                        <!-- start Address Section  -->
+                                        <div class="container">
+                                            <div class="row">
+                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                    style="background-color: aliceblue;">Medical Services</h6>
+                                                <div class="col-md-12 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">DNR/POLST ?</label>
+                                                    <select class="form-select" formControlName="DNRandPOLST" aria-label="Default select example">
+                                                        <option selected hidden>Select</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">On Hospice ?</label>
+                                                    <select class="form-select" formControlName="onHospice" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Hospice Agency</label>
+                                                    <input type="text" formControlName="hospiceAgency" class="form-control"
+                                                        placeholder="Hospice Agency " id="" required>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">On Home Health ?</label>
+                                                    <select class="form-select" formControlName="onHomeHealth" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Home Health Agency</label>
+                                                    <input type="text" formControlName="homeHealthAgency" class="form-control"
+                                                        placeholder="Home Health Agency " id="" required>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Preferred Hospital</label>
+                                                    <input type="text" formControlName="preferredHospital" class="form-control"
+                                                        placeholder="preferred Hospital " id="" required>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Preferred Pharmacy</label>
+                                                    <select class="form-select" formControlName="preferredPharmacy" aria-label="Default select example">
+                                                        <option selected>preferred Pharmacy</option>
+                                                        <option value="1">one</option>
+                                                        <option value="2">two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Mortuary</label>
+                                                    <input type="text" formControlName="mortuary" class="form-control" placeholder="Mortuary" id=""
+                                                        required>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Mortuary Number</label>
+                                                    <input type="text" formControlName="mortuaryNumber" class="form-control"
+                                                        placeholder="Mortuary Number " id="" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                    style="background-color: aliceblue;">Capabliities</h6>
+                                                <div class="col-md-12 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Is Verbal</label>
+                                                    <select class="form-select" formControlName="isVerbal" aria-label="Default select example">
+                                                        <option value="" selected>Select</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                    style="background-color: aliceblue;">Incontinence Status</h6>
+                                                <div class="col-md-12 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Incontinence Status</label>
+                                                    <select class="form-select" formControlName="incontinenceStatus" aria-label="Default select example">
+                                                        <option value="" selected>Select</option>
+                                                        <option value="continent">Continent</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                    style="background-color: aliceblue;">Ambulatory Status</h6>
+                                                <div class="col-md-12 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Ambulatory Status</label>
+                                                    <select class="form-select" formControlName="ambulatoryStatus" aria-label="Default select example"
+                                                        aria-placeholder="aDAFV">
+                                                        <option value="" selected>Select</option>
+                                                        <option value="independent">Independent (No Assistance Needed)
+                                                        </option>
+                                                        <option value="requiresAssistance">Requires Assistance</option>
+                                                        <option value="wheelchairBound">Wheelchair Bound</option>
+                                                        <option value="bedBound">Bed Bound</option>
+                                                        <option value="usesWalker">Uses Walker</option>
+                                                        <option value="usesCane">Uses Cane</option>
+                                                        <option value="nonAmbulatory">Non-Ambulatory</option>
+                                                        <option value="limitedMobility">Limited Mobility</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                    style="background-color: aliceblue;">Danger Responsiveness</h6>
+                                                <div class="col-md-12 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Danger Responsiveness ?</label>
+                                                    <select class="form-select" formControlName="dangerResponsiveness" aria-label="Default select example"
+                                                        aria-placeholder="aDAFV">
+                                                        <option value="" selected>Select</option>
+                                                        <option value="alertAndResponsive">Alert and Responsive to Danger</option>
+                                                        <option value="requiresPrompting">Requires Prompting to Avoid Danger</option>
+                                                        <option value="slowToRespond">Slow to Respond to Danger</option>
+                                                        <option value="unawareOfDanger">Unaware of Danger</option>
+                                                        <option value="needsSupervision">Needs Constant Supervision</option>
+                                                        <option value="fullyDependent">Fully Dependent on Others for Safety</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                    style="background-color: aliceblue;">Fancility information</h6>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Admission Date</label>
+                                                    <input type="date" formControlName="addmissionDate" class="form-control"
+                                                        placeholder="Admission Date " id="" required>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mt-3 mb-1 ">
+                                                    <label for="">Room ?</label>
+                                                    <select class="form-select" formControlName="room" aria-label="Default select example"
+                                                        aria-placeholder="aDAFV">
+                                                        <option value="" selected>Select</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 mt-3 mb-1">
+                                                    <label for="">Status</label>
+                                                    <select class="form-select" formControlName="facilityStatus" aria-label="Default select example"
+                                                        aria-placeholder="aDAFV">
+                                                        <option value="" selected>Select</option>
+                                                        <option value="active">Active</option>
+                                                        <option value="inactive">Inactive</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End Address Section  -->
+
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn rounded-5 px-4 text-light fw-bold"
+                                                style="background-color: #850F8D;">Create</button>
+                                            <button type="button" class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                                style="border: 1px solid red; color:red;" data-bs-dismiss="modal">Cancel</button>
+                
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <!-- <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open
+                              second modal</button>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: #850F8D;">
+                            <h1 class="modal-title fs-5 text-white" id="exampleModalToggleLabel2">New Pharmacy </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form>
+                                            <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                style="background-color: aliceblue;">
+                                                Basic Info</h6>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12 col-sm-12 mt-1 mb-1  mt-1 mb-1">
+                                                    <label for="firstName" class="form-label">Pharmacy Name*</label>
+                                                    <input type="text" class="form-control" placeholder="Pharmacy Name"
+                                                        id="firstName" required>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 mt-1 mb-1 col-sm-4 mt-1 mb-1">
+                                                    <div class="mb-3 form-check">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            id="exampleCheck1">
+                                                        <label class="form-check-label" for="exampleCheck1">Is
+                                                            Primary</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 col-12 mt-1 mb-1">
+                                                    <label for="lastName" class="form-label">Email Address*</label>
+                                                    <input type="text" class="form-control" placeholder="Email Address"
+                                                        id="lastName" required>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- Start phoen  section  -->
+                                            <div class="card rounded-3">
+                                                <h5 class="card-header">Phone 1 </h5>
+                                                <div class="card-body">
+                                                    <div class="container">
+                                                        <div class="row">
+
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="exampleInputEmail1"
+                                                                        class="form-label">lable
+                                                                    </label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="exampleInputEmail1" placeholder="label "
+                                                                        aria-describedby="emailHelp">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="exampleInputEmail1"
+                                                                        class="form-label">Phone
+                                                                        Number</label>
+                                                                    <input type="email" class="form-control"
+                                                                        id="exampleInputEmail1"
+                                                                        placeholder="Phone  Number"
+                                                                        aria-describedby="emailHelp">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label for="">Type</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Work</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn bg-transparent fw-bold"
+                                                    style="color: rgb(243, 81, 156); border: 1px solid rgb(243, 43, 143);">ADD
+                                                    PHONE</button>
+                                            </div>
+                                            <!--End Capabliities section  -->
+
+
+                                            <!-- start Address Section  -->
+                                            <div class="container">
+                                                <div class="row">
+                                                    <h6 class="py-3 mx-2 fw-bold  text-secondary"
+                                                        style="background-color: aliceblue;">Address Info</h6>
+                                                    <div class="col-md-12">
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1" class="form-label">
+                                                                Address Line 1</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" placeholder="AddressLine 1"
+                                                                aria-describedby="emailHelp">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1" class="form-label">
+                                                                Address Line 2</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" placeholder="AddressLine 2"
+                                                                aria-describedby="emailHelp">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1"
+                                                                class="form-label">City</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" placeholder="City"
+                                                                aria-describedby="emailHelp">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="">State</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>State</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1"
+                                                                class="form-label">ZipCode</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" placeholder="City"
+                                                                aria-describedby="emailHelp">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="">United State</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected> United State</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End Address Section  -->
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Hide this modal and show the first with the button below. -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn rounded-5 px-4 text-light fw-bold"
+                                style="background-color: #850F8D;">Create</button>
+                            <button type="button" class="btn bg-transparent rounded-5 px-4 fw-bold"
+                                style="border: 1px solid #850F8D; color:#850F8D;"
+                                data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <nav class="navbar navbar-custom p-2"
+                style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h5 text-white">Resident List</span>
+                    <div class="d-flex align-items-center">
+                        <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                            <i class="fas fa-bell"></i>
+                        </span>
+
+                        <div class="dropdown">
+                            <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </span>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div id="main">
+    <div class="container" style="margin-top: 4rem;">
+       
+        
+        <div class="row">
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead style="background-color: #850F8D; color: white; text-wrap: nowrap;">
+                          <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Date</th>
+                            <th>Phone</th>
+                            <th>SSN</th>
+                            <th>Religion</th>
+                            <th>Primary Language</th>
+                            <th>Resident Phone</th>
+                            <th>Eye Color</th>
+                            <th>Height Unit</th>
+                            <th>Feet</th>
+                            <th>Inches</th>
+                            <th>Biography</th>
+                            <th>On Hospice</th>
+                            <th>Hospice Agency</th>
+                            <th>On Home Health</th>
+                            <th>DNR and POLST</th>
+                            <th>Home Health Agency</th>
+                            <th>Preferred Hospital</th>
+                            <th>Preferred Pharmacy</th>
+                            <th>Mortuary</th>
+                            <th>Mortuary Number</th>
+                            <th>Is Verbal</th>
+                            <th>Incontinence Status</th>
+                            <th>Ambulatory Status</th>
+                            <th>Danger Responsiveness</th>
+                            <th>Admission Date</th>
+                            <th>Room</th>
+                            <th>Facility Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let resident of residentData">
+                            <td>{{ resident.firstname }}</td>
+                            <td>{{ resident.lastname }}</td>
+                            <td>{{ resident.gender }}</td>
+                            <td>{{ resident.date }}</td>
+                            <td>{{ resident.phone }}</td>
+                            <td>{{ resident.ssn }}</td>
+                            <td>{{ resident.religionName }}</td>
+                            <td>{{ resident.primaryLanguage }}</td>
+                            <td>{{ resident.residentPhone }}</td>
+                            <td>{{ resident.eyeColor }}</td>
+                            <td>{{ resident.heightUnit }}</td>
+                            <td>{{ resident.feet }}</td>
+                            <td>{{ resident.inches }}</td>
+                            <td>{{ resident.biography }}</td>
+                            <td>{{ resident.onHospice }}</td>
+                            <td>{{ resident.hospiceAgency }}</td>
+                            <td>{{ resident.onHomeHealth }}</td>
+                            <td>{{ resident.DNRandPOLST }}</td>
+                            <td>{{ resident.homeHealthAgency }}</td>
+                            <td>{{ resident.preferredHospital }}</td>
+                            <td>{{ resident.preferredPharmacy }}</td>
+                            <td>{{ resident.mortuary }}</td>
+                            <td>{{ resident.mortuaryNumber }}</td>
+                            <td>{{ resident.isVerbal }}</td>
+                            <td>{{ resident.incontinenceStatus }}</td>
+                            <td>{{ resident.ambulatoryStatus }}</td>
+                            <td>{{ resident.dangerResponsiveness }}</td>
+                            <td>{{ resident.addmissionDate }}</td>
+                            <td>{{ resident.room }}</td>
+                            <td>{{ resident.facilityStatus }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                </div>
+                
+            </div>
+            
+        </div>
+        
+
+        <!-- button-code   -->
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn  rounded-circle m-2 set_btn" data-bs-toggle="modal"
+                data-bs-target="#exampleModalToggle"><i class="fa-sharp fa-solid fa-plus"></i></button>
+        </div>
+    </div>
+    <!-- Offcanvas Notification -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+        aria-labelledby="offcanvasNotificationLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- Notification List -->
+            <div class="notification-item">
+                <i class="fas fa-envelope notification-icon"></i>
+                <div class="notification-text">
+                    <strong>New Message</strong><br>
+                    You have received a message from John.
+                </div>
+            </div>
+
+            <div class="notification-item">
+                <i class="fas fa-tasks notification-icon"></i>
+                <div class="notification-text">
+                    <strong>Task Reminder</strong><br>
+                    Complete your daily report by 5 PM.
+                </div>
+            </div>
+
+            <div class="notification-item">
+                <i class="fas fa-exclamation-triangle notification-icon"></i>
+                <div class="notification-text">
+                    <strong>Warning</strong><br>
+                    Your subscription will expire soon. Renew it now.
+                </div>
+            </div>
+
+            <!-- Add more notification items if needed -->
+            <div class="offcanvas-footer">
+                <button class="btn btn-primary archive-button">
+                    <i class="fas fa-archive"></i> Archive All
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

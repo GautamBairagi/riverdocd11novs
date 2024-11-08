@@ -1,0 +1,70 @@
+<section id="minimal-statistics">
+    <div class="container">
+        <h2 style="font-weight:500; margin-bottom: 20px;  margin-top:5rem ;">Patient</h2>
+        <div class="mb-4">
+            <h4 style="background-color: white ; color: white; padding: 10px; border-radius: 5px;" class="shadow">View
+                patient details</h4>
+        </div>
+        <!-- Patient List Table -->
+        <div class="mt-5 responsive-table">
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover mt-3">
+                    <thead style="background-color: white ; color: white; white-space: nowrap;">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                           <th>Gender</th>
+                            <th>Date of Birth</th>
+                            <th>Facility Name</th>
+                            <th>Medications</th>
+                            <th>Doctor Name</th>
+                            <th>Contact</th>
+                            <th>Blood Group</th>
+                            <th>Behavior  </th>
+                            <th>Medical Conditions</th>
+                            <th>Allergies</th>
+                            <th>Weight</th>
+                            <th>Height</th>
+                            <th>Eye Color</th>
+                           <th>Face sheet</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody style="white-space: nowrap;">
+                        <tr>
+                        <tr *ngFor="let patient of allPatientData;let i = index">
+                            <td>{{ patient.name }}</td>
+                            <td>{{ patient.email }}</td>
+                            <td>{{ patient.gender }}</td>
+                            <td>{{ patient.dateofBirth }}</td>
+                            <td>{{ patient.facilityName }}</td>
+                            <td>{{ patient.medications }}</td>
+                            <td>{{ patient.doctorName }}</td>
+                            <td>{{ patient.contact }}</td>
+                            <td>{{ patient.bloodGroup }}</td>
+                            <td>{{ patient.behaviour   }}</td>
+                            <td>{{ patient.medicalConditions }}</td>
+                            <td>{{ patient.allergies }}</td>
+                            <td>{{ patient.weight }}</td>
+                            <td>{{ patient.height }}</td>
+                            <td>{{ patient.eyeColor }}</td>
+                            <td>
+                                <button (click)="generateInvoice(patient)" class="btn btn-primary">View</button>
+                              </td>
+                            <td>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- Add more patient rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

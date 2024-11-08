@@ -1,0 +1,263 @@
+
+<div class="container-fluid">
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-end" style="margin-top: 4rem;">
+       
+<button type="button" class="btn  rounded-circle" style="background-color: #850F8D; color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-plus"></i>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content text-start">
+        <div class="modal-header" style="background-color: #850F8D; color: white;">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" >Resident Facesheet Form</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           
+            <form [formGroup]="residentForm" (ngSubmit)="onSubmit()" class="container mt-4">
+                
+              
+                <!-- Personal Info -->
+                <fieldset class="border p-3 mb-4">
+                  <legend class="w-auto">Personal Information</legend>
+              
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Full Name:</label>
+                      <select formControlName="" class="form-select" id="">
+                        <option value="ss" selected hidden>Select</option>
+                        <option *ngFor="let rs of residentData" [value]="rs.id">{{rs.firstname}}</option>
+                      </select>
+                    </div>
+              
+                    <div class="form-group col-md-3">
+                      <label>Date of Birth:</label>
+                      <input formControlName="dob" type="date" class="form-control">
+                    </div>
+              
+                    <div class="form-group col-md-3">
+                      <label>Gender:</label>
+                      <select formControlName="gender" class="form-control">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                    </div>
+                  </div>
+              
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Contact Number:</label>
+                      <input formControlName="contactNumber" type="text" class="form-control">
+                    </div>
+              
+                    <div class="form-group col-md-6">
+                      <label>Email:</label>
+                      <input formControlName="email" type="email" class="form-control">
+                    </div>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Address:</label>
+                    <textarea formControlName="address" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Profile Photo:</label>
+                    <input formControlName="profilePhoto" type="file" class="form-control">
+                  </div>
+                </fieldset>
+              
+                <!-- Medical Info -->
+                <fieldset class="border p-3 mb-4">
+                  <legend class="w-auto">Medical Information</legend>
+              
+                  <div class="form-group">
+                    <label>Primary Physician:</label>
+                    <input formControlName="primaryPhysician" type="text" class="form-control">
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Allergies:</label>
+                    <textarea formControlName="allergies" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Medications:</label>
+                    <textarea formControlName="medications" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Medical History:</label>
+                    <textarea formControlName="medicalHistory" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Care Plan:</label>
+                    <textarea formControlName="carePlan" class="form-control"></textarea>
+                  </div>
+                </fieldset>
+              
+                <!-- Insurance Info -->
+                <fieldset class="border p-3 mb-4">
+                  <legend class="w-auto">Insurance Information</legend>
+              
+                  <div class="form-group">
+                    <label>Insurance Provider:</label>
+                    <input formControlName="insuranceProvider" type="text" class="form-control">
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Policy Number:</label>
+                    <input formControlName="policyNumber" type="text" class="form-control">
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Coverage Details:</label>
+                    <textarea formControlName="coverageDetails" class="form-control"></textarea>
+                  </div>
+                </fieldset>
+              
+                <!-- Emergency Contact -->
+                <fieldset class="border p-3 mb-4">
+                  <legend class="w-auto">Emergency Contact</legend>
+              
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Contact Name:</label>
+                      <input formControlName="emergencyContactName" type="text" class="form-control">
+                    </div>
+              
+                    <div class="form-group col-md-6">
+                      <label>Relationship:</label>
+                      <input formControlName="emergencyContactRelationship" type="text" class="form-control">
+                    </div>
+                  </div>
+              
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Phone Number:</label>
+                      <input formControlName="emergencyContactPhoneNumber" type="text" class="form-control">
+                    </div>
+              
+                    <div class="form-group col-md-6">
+                      <label>Address:</label>
+                      <textarea formControlName="emergencyContactAddress" class="form-control"></textarea>
+                    </div>
+                  </div>
+                </fieldset>
+              
+                <!-- Admission Details -->
+                <fieldset class="border p-3 mb-4">
+                  <legend class="w-auto">Admission Details</legend>
+              
+                  <div class="form-group">
+                    <label>Admission Date:</label>
+                    <input formControlName="admissionDate" type="date" class="form-control">
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Reason for Admission:</label>
+                    <textarea formControlName="reasonForAdmission" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Assigned Care Team:</label>
+                    <textarea formControlName="careTeam" class="form-control"></textarea>
+                  </div>
+                </fieldset>
+              
+                <!-- Other Information -->
+                <fieldset class="border p-3 mb-4">
+                  <legend class="w-auto">Other Information</legend>
+              
+                  <div class="form-group">
+                    <label>Special Instructions:</label>
+                    <textarea formControlName="specialInstructions" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Mobility Needs:</label>
+                    <textarea formControlName="mobilityNeeds" class="form-control"></textarea>
+                  </div>
+              
+                  <div class="form-group">
+                    <label>Dietary Preferences:</label>
+                    <textarea formControlName="dietaryPreferences" class="form-control"></textarea>
+                  </div>
+                </fieldset>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" [disabled]="residentForm.invalid" class="btn " style="background-color: #850F8D; color: white;">Save changes</button>
+                  </div>
+              </form>
+              
+              
+        </div>
+       
+      </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="row mt-5">
+       
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <nav class="navbar navbar-custom p-2" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h5 text-white">Facesheet List</span>
+        
+              <div class="d-flex align-items-center">
+                <!-- Notification Icon -->
+                <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                  <i class="fas fa-bell"></i> <!-- Updated Font Awesome Icon -->
+                </span>
+        
+                <!-- Three Dot Menu -->
+                <div class="dropdown">
+                  <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i> <!-- Updated Three-Dot Icon -->
+                  </span>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Date</th>
+                        <th>Resident Phone</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rs of residentData">
+                        <td>{{rs.firstname}}</td>
+                        <td>{{rs.lastname}}</td>
+                        <td>{{rs.gender}}</td>
+                        <td>{{rs.date}}</td>
+                        <td>{{rs.residentPhone}}</td>
+                        <td> <button routerLink="/admin/resident_facesheet" class="btn" style="background-color: #850F8D; color: white;">Face sheet</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+       </div>
+       
+    </div>
+    
+  </div>
+
+

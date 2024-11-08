@@ -1,0 +1,201 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <nav class="navbar navbar-custom p-2" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+              <div class="container-fluid">
+                <span class="navbar-brand mb-0 h5 text-white">Notebooks</span>
+          
+                <div class="d-flex align-items-center">
+                  <!-- Notification Icon -->
+                  <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                    <i class="fas fa-bell"></i> <!-- Updated Font Awesome Icon -->
+                  </span>
+          
+                  <!-- Three Dot Menu -->
+                  <div class="dropdown">
+                    <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v"></i> <!-- Updated Three-Dot Icon -->
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          
+            <!-- Offcanvas Notification -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification" aria-labelledby="offcanvasNotificationLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+          
+              <div class="offcanvas-body">
+                <!-- Notification List -->
+                <div class="notification-item">
+                  <i class="fas fa-envelope notification-icon"></i>
+                  <div class="notification-text">
+                    <strong>New Message</strong><br>
+                    You have received a message from John.
+                  </div>
+                </div>
+          
+                <div class="notification-item">
+                  <i class="fas fa-tasks notification-icon"></i>
+                  <div class="notification-text">
+                    <strong>Task Reminder</strong><br>
+                    Complete your daily report by 5 PM.
+                  </div>
+                </div>
+          
+                <div class="notification-item">
+                  <i class="fas fa-exclamation-triangle notification-icon"></i>
+                  <div class="notification-text">
+                    <strong>Warning</strong><br>
+                    Your subscription will expire soon. Renew it now.
+                  </div>
+                </div>
+          
+                <!-- Add more notification items if needed -->
+                <div class="offcanvas-footer">
+                  <button class="btn btn-primary archive-button">
+                    <i class="fas fa-archive"></i> Archive All
+                  </button>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+  </div>
+  
+</div>
+
+<div class="container mt-4">
+    <h2 style="font-weight:500; margin-bottom: 20px;"> Add Notes  </h2>
+ 
+  <!-- General Information -->
+  <div class="mb-4">
+    <h4 style="background-color: #850F8D ; color: white; padding: 10px; border-radius: 5px;" class="shadow">Daily Notes</h4>
+    <form>
+      <div class="row g-3 mt-2">
+   
+        
+        <div class="col-md-6">
+          <label for="name" style="font-weight: bold;">Patient Name</label>
+          <input type="text" class="form-control mt-2" id="name" placeholder="Enter Name"formControlName="patientName">
+        </div>
+            <div class="col-md-6">
+              <label for="" style="font-weight: bold;">Shift</label>
+              <select class="form-select mt-2" id="" aria-placeholder="" formControlName="shift" >
+              
+                <option>AM Shift</option>
+                <option>PM Shift</option>
+                <option>Mid Day Shifts</option>
+                <option>Night Shifts</option>
+                <option> NOC Shifts</option>
+              </select>
+            </div>
+            <div class="col-md-6">  
+              <label for="name" style="font-weight: bold;">Time Notes</label>
+              <input type="text" class="form-control" formControlName="time" id="" placeholder="Enter time">
+            </div> 
+            <div class="col-md-12">  
+              <label for="name" style="font-weight: bold;">Nurse Notes</label>
+              <textarea class="form-control" formControlName="notes" id="" placeholder="Enter note here" rows="4"></textarea>
+            </div>
+    
+      </div>
+      <div class="float-end d-flex grid gap-3 mt-2">
+          <button type="button" class="btn" style="background-color: #850F8D ; color: white; font-weight: bold;">Submit</button>
+          <button type="button" class="btn" style="background-color:white  ; color: red; font-weight: bold;">close</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+  <!-- Patient List Table -->
+  <div class="mt-5 responsive-table mt-4">
+    <h4 style="background-color: #850F8D ; color: white; padding: 10px; border-radius: 5px;"> List</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover mt-3">
+        <thead style="background-color: #850F8D ; color: white; white-space: nowrap;">
+          <tr>
+            <th>#</th>
+            <th>Nuser Notes</th>
+            <th>Patient Name</th>
+            <th>Shift</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <!-- <tbody style="white-space: nowrap;">
+          
+              <tr *ngFor="let admin of getpriscriber; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{admin.patientName}}</td>
+            <td>{{admin.shift}}</td>
+            <td>{{admin.notes}}</td>
+            <td>
+              <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                <i class="fas fa-trash"></i>
+              </span>
+              <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                <i class="fas fa-edit"></i>
+              </span>
+            </td>
+          </tr>
+        </tbody> -->
+
+
+
+        <tbody style="white-space: nowrap;">
+          <!-- Check if API data is available -->
+          <ng-container *ngIf="getpriscriber && getpriscriber.length > 0; else showStaticData">
+            <tr *ngFor="let admin of getpriscriber; let i = index">
+              <td>{{ i+1 }} </td>
+              <td>{{ admin.notes }}</td>
+              <td>{{ admin.patientName}}</td>
+              <td>{{ admin.shift }}</td>
+             
+              <td>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                  <i class="fas fa-trash"></i>
+                </span>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                  <i class="fas fa-edit"></i>
+                </span>
+              </td>
+            </tr>
+          </ng-container>
+        
+          <!-- Define static data if API data is not available -->
+          <ng-template #showStaticData>
+            <tr>		
+              <td>1</td>
+              <td>this is a note</td>
+              <td>shivam</td>
+              <td>day shift</td>
+              <td>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: red;">
+                  <i class="fas fa-trash"></i>
+                </span>
+                <span style="cursor:pointer; font-size:18px; padding:5px; color: white ;">
+                  <i class="fas fa-edit"></i>
+                </span>
+              </td>
+            </tr>
+            <!-- You can add more static rows here if needed -->
+          </ng-template>
+        </tbody>
+
+
+        
+      </table>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

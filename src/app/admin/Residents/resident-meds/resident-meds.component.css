@@ -1,0 +1,87 @@
+.navbar-custom {
+    background-color: rgb(247, 39, 108);
+  }
+
+  .nav-item {
+    color: white;
+  }
+
+  .nav-item:hover {
+    cursor: pointer;
+  }
+
+  .offcanvas-header {
+    background-color: #850F8D;
+    color: white;
+  }
+
+  .notification-icon {
+    font-size: 40px;
+    color: #850F8D;
+    margin-right: 10px;
+  }
+
+  .archive-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .offcanvas-footer {
+    padding-bottom: 15px;
+  }
+
+  .notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .notification-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  .notification-text {
+    font-size: 14px;
+  }
+
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* margin-right: 10px; */
+
+  }
+  .card-custom {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .card-header-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-header-custom .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-tabs .nav-link.active {
+    color: #ff4cc9;
+    border-bottom: 2px solid #d11f87;
+  }

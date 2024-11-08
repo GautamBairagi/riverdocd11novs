@@ -1,0 +1,124 @@
+<section id="minimal-statistics">
+  <div class="container">
+    <h2 style="font-weight:500; margin-bottom: 20px; margin-top:5rem ;">Set Up</h2>
+    <div class="mb-4">
+      <h4 style="background-color: white; color: white; padding: 10px; border-radius: 5px;" class="shadow">
+        Nurse setup</h4>
+    </div>
+    <div class="mt-5 responsive-table">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mt-3">
+          <thead style="background-color: white; color: white; white-space: nowrap;">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Registerd As</th>
+              <th>Contact</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody style="white-space: nowrap;">
+            <tr>
+            <tr *ngFor="let nurse of allNurseData;let i = index">
+              <td>{{ nurse.name }}</td>
+              <td>{{ nurse.email }}</td>
+              <td>{{ nurse.registerdAs }}</td>
+              <td>{{ nurse.mobileNumber }}</td>
+              <td>
+                <div *ngIf="nurse.patientstatus" style="color: green; font-weight: bold; ">Verified Licence
+                </div>
+                <button title="Toggle Licence Status" class="btn btn-primary bg-transparent mx-2"
+                  (click)="toggleVerified(nurse)">
+                  <i *ngIf="!nurse.patientstatus" style="color: green;" class="fa-solid fa-check"></i>
+                  <i *ngIf="nurse.patientstatus" style="color: red;" class="fa-solid fa-xmark"></i>
+                </button>
+                <!-- Button trigger modal -->
+                <!-- <button type="button" (click)="nurseById(nurse.id)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Inactive
+                </button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Are you sure you want to inactive {{ patientByIdData.name }} ?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="activeInactiveNurse()" >Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- <table id="example" class="display" style="width:100%; margin-top: 5rem; text-align: center;">
+    <thead style="text-align: center;" >
+      <tr>
+        <th  style="text-align: center;">Name</th>
+        <th  style="text-align: center;">Position</th>
+        <th>Office</th>
+        <th>Age</th>
+        <th>Start date</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>Edinburgh</td>
+        <td>61</td>
+        <td>2011-04-25</td>
+        <td>$320,800</td>
+      </tr>
+      <tr>
+        <td>Garrett Winters</td>
+        <td>Accountant</td>
+        <td>Tokyo</td>
+        <td>63</td>
+        <td>2011-07-25</td>
+        <td>$170,750</td>
+      </tr>
+      <tr>
+        <td>Ashton Cox</td>
+        <td>Junior Technical Author</td>
+        <td>San Francisco</td>
+        <td>66</td>
+        <td>2009-01-12</td>
+        <td>$86,000</td>
+      </tr>
+      <tr>
+        <td>Michael Bruce</td>
+        <td>Javascript Developer</td>
+        <td>Singapore</td>
+        <td>29</td>
+        <td>2011-06-27</td>
+        <td>$183,000</td>
+      </tr>
+      <tr>
+        <td>Donna Snider</td>
+        <td>Customer Support</td>
+        <td>New York</td>
+        <td>27</td>
+        <td>2011-01-25</td>
+        <td>$112,000</td>
+      </tr>
+    </tbody>
+  </table> -->

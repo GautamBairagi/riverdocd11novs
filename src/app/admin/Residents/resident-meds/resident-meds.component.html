@@ -1,0 +1,419 @@
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <nav class="navbar navbar-custom p-2" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+              <div class="container-fluid">
+                <span class="navbar-brand mb-0 h5 text-white">Atriss</span>
+          
+                <div class="d-flex align-items-center">
+                  <!-- Notification Icon -->
+                  <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+                    <i class="fas fa-bell"></i> <!-- Updated Font Awesome Icon -->
+                  </span>
+          
+                  <!-- Three Dot Menu -->
+                  <div class="dropdown">
+                    <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v"></i> <!-- Updated Three-Dot Icon -->
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          
+            <!-- Offcanvas Notification -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification" aria-labelledby="offcanvasNotificationLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+          
+              <div class="offcanvas-body">
+                <!-- Notification List -->
+                <div class="notification-item">
+                  <i class="fas fa-envelope notification-icon"></i>
+                  <div class="notification-text">
+                    <strong>New Message</strong><br>
+                    You have received a message from John.
+                  </div>
+                </div>
+          
+                <div class="notification-item">
+                  <i class="fas fa-tasks notification-icon"></i>
+                  <div class="notification-text">
+                    <strong>Task Reminder</strong><br>
+                    Complete your daily report by 5 PM.
+                  </div>
+                </div>
+          
+                <div class="notification-item">
+                  <i class="fas fa-exclamation-triangle notification-icon"></i>
+                  <div class="notification-text">
+                    <strong>Warning</strong><br>
+                    Your subscription will expire soon. Renew it now.
+                  </div>
+                </div>
+          
+                <!-- Add more notification items if needed -->
+                <div class="offcanvas-footer">
+                  <button class="btn btn-primary archive-button">
+                    <i class="fas fa-archive"></i> Archive All
+                  </button>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+  </div>
+  
+</div>
+<div id="main">
+    <div class="container" style="margin-top: 2rem;">
+          <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button"
+          role="tab">INFO</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical" type="button"
+          role="tab">INVENTORY</button>
+      </li>
+    </ul>
+    <!-- Profile Card -->
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="general" role="tabpanel">
+        <div class="card">
+          <div class="card-body">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline rounded-pill m-1"
+              style="border: 1px solid #e23da3; color: #e23da3;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-sharp fa-solid fa-pen"></i> UPDATE
+            </button>
+
+            <!-- Modal 1-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-white" style="background-color: #e23da3;">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">UPDATE</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="mb-2 text-body-secondary "> What is the reason for this update ? </h4>
+                    <div class="m-3 text-center">
+                      <button type="button" class="btn btn-outline rounded-pill  "
+                        style="border: 1px solid #12FCF5; background-color: #12FCF5; color: black;"><i
+                          class="fa-sharp fa-solid fa-pen"></i> CORRECTING A MISTAKE</button>
+                    </div>
+                    <div class="m-3 text-center">
+                      <button type="button" class="btn btn-outline rounded-pill  "
+                        style="border: 1px solid #e23da3; background-color: #e23da3; color: white;"><i
+                          class="fa-solid fa-timer"></i> PRESCRIPTION CHANGED</button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline rounded-pill m-1" data-bs-toggle="modal"
+              data-bs-target="#exampleModal1" style="border: 1px solid #e23da3;   color: #e23da3;">
+              <i class="fa-duotone fa-solid fa-play"></i> HOLD
+            </button>
+
+            <!-- Modal 2-->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-white" style="background-color: #e23da3;">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Hold</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Hold Date</label>
+                      <input type="date" class="form-control" id="" placeholder="E">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Hold Time</label>
+                      <input type="time" class="form-control" id="formGroupExampleInput2" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label"></label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Hold Reason *">
+                      <p>Reason for the Hold</p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline rounded-pill "
+                      style="border: 1px solid #e23da3; color: #e23da3; background-color: #e23da3 ; color: white;">SUBMIT</button>
+                    <button type="button" class="btn btn-outline rounded-pill" data-bs-dismiss="modal"
+                      style="border: 1px solid #e23da3;   color: #e23da3;">CANCEL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline rounded-pill m-1" data-bs-toggle="modal"
+              data-bs-target="#exampleModal2" style="border: 1px solid #e23da3;   color: #e23da3;">
+              <i class="fa-duotone fa-solid fa-play"></i> D/C
+            </button>
+            <!-- Modal 3-->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-white" style="background-color: #e23da3;">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Discontinue</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Discontinue Date</label>
+                      <input type="date" class="form-control" id="" placeholder="E">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Discontinue Time</label>
+                      <input type="time" class="form-control" id="formGroupExampleInput2" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label"></label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Discontinue Reason *">
+                      <p>Reason for the discontinue</p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline rounded-pill "
+                      style="border: 1px solid #e23da3; color: #e23da3; background-color: #e23da3 ; color: white;">SUBMIT</button>
+                    <button type="button" class="btn btn-outline rounded-pill" data-bs-dismiss="modal"
+                      style="border: 1px solid #e23da3;   color: #e23da3;">CANCEL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+
+
+          </div>
+        </div>
+
+        <div>
+          <div class="row mt-3 mb-3">
+
+            <div class="col-sm-5 mb-3 mb-sm-0">
+              <div class="card ">
+                <div class="d-flex align-items-center">
+
+
+                  <div class="profile-img m-3" style="background-color: #12FCF5; ">
+                    <i class="fa-sharp fa-solid fa-tablets fs-5 m-2"></i>
+
+                  </div>
+                  <div class="">
+                    <strong>Seroquel (quetiapine) </strong> <span>v13</span><br>
+                    <small>150mg tablet 2</small>
+                  </div>
+                </div>
+                <div class="card-body ">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h6>Status</h6>
+                      <span class="text-body-secondary ">Action</span>
+                      <h6 class="mt-4">Instructions</h6>
+                      <span>Take 1 (150mg) Tablet </span>
+
+                    </div>
+                    <div class="col-sm-6">
+                      <h6>Side Effects</h6>
+                      <span class="text-body-secondary ">Drowsiness,Fatigue</span>
+                      <h6 class="mt-4">Last Updated by</h6>
+                      <span class="text-body-secondary ">Zach VanDuren</span>
+                      <p></p>
+                    </div>
+                    <span class="text-body-secondary fw-bolder" style="border-bottom: 1px solid grey;">Additional Information</span>
+                    <!-- <hr> -->
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-sm-6">
+                      <h6>Prescriber</h6>
+                      <span class="text-body-secondary ">Stephen Strange</span>
+                      <h6 class="mt-4">Type</h6>
+                      <span class="text-body-secondary ">Antidepressant</span>
+                      <h6 class="mt-4">Form</h6>
+                      <span class="text-body-secondary ">Tablet </span>
+                      <h6 class="mt-4">Narcotic</h6>
+                      <span class="text-body-secondary ">Yes </span>
+                      <h6 class="mt-4">Crush</h6>
+                      <span class="text-body-secondary ">No </span>
+
+                    </div>
+                    <div class="col-sm-6">
+                      <h6>Ordering Pharmacy</h6>
+                      <span class="text-body-secondary ">Walmart</span>
+                      <h6 class="mt-4">Route</h6>
+                      <span class="text-body-secondary ">Oral</span>
+                      <h6 class="mt-4">Black Box Warning</h6>
+                      <span class="text-body-secondary ">No </span>
+
+                      <h6 class="mt-4">Auto Order (Cycle)</h6>
+                      <span class="text-body-secondary ">No </span>
+                      <h6 class="mt-4">Food Requirement</h6>
+                      <span>None </span>
+
+                    </div>
+                    <span class="mt-4 mb-2 text-body-secondary fw-bolder" style="border-bottom: 1px solid grey;">PRN Done Information </span>
+                    <!-- <hr> -->
+                  </div>
+                  <div class="row mt-2">
+                    <div class="alert alert-info  " role="alert">
+                      <i class="fa-regular fa-circle-info"></i> This medication is not marked as a PRN
+                    </div>
+
+                    <!-- dwerfwst -->
+
+                    <h6 class=" mb-2 text-body-secondary fw-bolder" style="border-bottom: 1px solid grey;">Script</h6>
+                    <!-- <hr> -->
+                    <h6 class="mb-2 text-body-secondary fw-bolder mt-2">Originally Prescriber</h6>
+                    <div class="card mx-auto" style="width: 20rem;">
+                      <div class="card-body text-center">
+                        <p class="text-center">
+                          <span><i class="fa-sharp fa-regular fa-image fs-1 p-3"></i></span>
+                          <span><i class="fa-sharp fa-solid fa-file-pdf fs-1"></i></span>
+                        </p>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Drag script image or pdf here</h6>
+                        <p>Or</p>
+                        <button type="button" class="btn btn-outline rounded-pill  "
+                          style="border: 1px solid #e23da3; background-color: #e23da3; color: white;"><i
+                            class="fa-sharp fa-regular fa-arrow-down-to-bracket"></i> BROWSE FILTER</button>
+                        <p>Or</p>
+                        <button type="button" class="btn btn-outline rounded-pill"
+                          style="border: 1px solid #e23da3; background-color: #e23da3; color: white;"><i
+                            class="fa-duotone fa-solid fa-camera"></i> TASK PICTURE</button>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-header">
+                  Schedule
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-info  " role="alert">
+                    <i class="fa-regular fa-circle-info"></i> This medication has no schedule
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="medical" role="tabpanel">
+        .......
+      </div>
+
+    </div>
+    <!-- <div class="d-flex justify-content-end d-grid gap-2 mt-2">
+        <button type="button" class="btn btn-light"><i class="fa-sharp fa-solid fa-file-pdf"></i></button>
+        <button type="button" class="btn btn-light"><i class="fa-sharp fa-solid fa-filter"></i></button>
+    </div> -->
+    <!-- <div class="card m-2 mx-auto" style="width: 800px;">
+        <div class="card-header">
+          Routine Medications
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item "><span class="rounded-circle p-2 m-1 "  style="background-color: #c002c0; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"><i class="fa-sharp fa-regular fa-capsules "></i></span> MED 1 <span>(878mg-125gm)</span> <span >v2</span>
+            <section  style="padding-left: 55px; color:gray;"><span>asdf</span></section>
+            
+        </li>
+          <li class="list-group-item "><span class="rounded-circle p-2 m-1"  style="background-color: #c002c0;  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"><i class="fa-sharp fa-regular fa-capsules "></i></span> PUFF  <span>(878mg-125gm)</span> <span >v2</span>
+            <section  style="padding-left: 55px; color:gray;"><span>asdf</span></section>
+            
+        </li>
+          <li class="list-group-item "><span class="rounded-circle p-2 m-1"  style="background-color: #c002c0; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; "><i class="fa-sharp fa-regular fa-capsules "></i></span> MED 1 <span>(878mg-125gm)</span> <span >v2</span>
+            <section  style="padding-left: 55px; color:gray;"><span>asdf</span></section>
+            
+        </li>
+        </ul>
+      </div> -->
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn set_btn  rounded-circle m-2" data-bs-toggle="modal" href="#exampleModalToggle"><i class="fa-sharp fa-solid fa-plus"></i></button>
+      </div>
+</div>
+    
+
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel" style="color:  #850F8D;">  Adding New Medication (MAR) </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2 class="Adding" style=" font-weight:500; margin-bottom: 20px; font-size: 28px;"> 
+                Adding New Medication (MAR) </h2>
+              <div class="mb-4">
+                <h4 style="background-color:  #850F8D ; color: white; padding: 10px; border-radius: 5px;" class="shadow">(MAR)</h4>
+                <form>
+                  <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                      <label for="firstName" style="font-weight: bold;">Medication Name </label>
+                      <input type="text" class="form-control mt-2" id="firstName" placeholder="Medication Name ">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="dob" style="font-weight: bold;"> RX Number </label>
+                      <input type="text" class="form-control mt-2" id="dob" placeholder="RX Number">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="lastName" style="font-weight: bold;">Frequency of Medication </label>
+                      <input type="text" class="form-control mt-2" id="lastName" placeholder="Frequency of Medication">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="lastName" style="font-weight: bold;">Medication Unit</label>
+                      <input type="text" class="form-control mt-2" id="lastName" placeholder="Medication Unit">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="dob" style="font-weight: bold;">Manufacturing Date </label>
+                      <input type="date" class="form-control mt-2" id="dob">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="dob" style="font-weight: bold;">Expiry Date Refills </label>
+                      <input type="date" class="form-control mt-2" id="dob">
+                    </div>
+                  
+                   
+                    <div class="col-md-6 text-end">
+                      <button type="submit" class="btn mt-5" style="background-color:  #850F8D ; color: white;">Add Patient</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn text-light fw-bold w-100" style="background-color:  #850F8D ;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,146 @@
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <nav class="navbar navbar-custom p-2"
+        style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;margin-top: 4rem;">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h5 text-white">Announcement </span>
+          <div class="d-flex align-items-center">
+            <span class="text-white me-3" id="notificationIcon" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNotification" aria-controls="offcanvasNotification">
+              <i class="fas fa-bell"></i> 
+            </span>
+
+            <div class="dropdown">
+              <span class="text-white" id="threeDotMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i> 
+              </span>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  </div>
+
+
+      <div id="main">
+        <div class="container" style="margin-top: 4rem;">
+          <div class="row">
+            <div class="col-md-12">
+              
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead style="background-color: #850F8D; color: white;">
+                    <tr>
+                      <th>To</th>
+                      <th>Subject</th>
+                      <th>Body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let admin  of getgetannouncement ">
+                      <td>{{admin.to}}</td> 
+                      <td>{{admin.subject}}</td>
+                      <td>{{admin.body}} </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            </div>
+          </div>
+          <!-- button-code   -->
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn  rounded-circle m-2 set_btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              ><i class="fa-sharp fa-solid fa-plus"></i></button>
+          </div>
+
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #850F8D;">
+                  <h1 class="modal-title text-white fs-5" id="exampleModalLabel">Announcement</h1>
+                  <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="myForm"  >
+                  <div class="row g-3">   
+                    <div class="col-sm-12"> 
+                      <input type="text" class="form-control" formControlName="to" placeholder="To" aria-label="First name">
+                    </div>
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" formControlName="subject" placeholder="Subject *" aria-label="Last name">
+                    </div>
+                    <div class="col-sm-12">
+                      <textarea class="form-control" formControlName="body" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="body *"></textarea>
+                    </div>
+                  </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary unique-btn" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn  unique-btn" (click)="onSubmit()">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Offcanvas Notification -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotification"
+      aria-labelledby="offcanvasNotificationLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNotificationLabel">Notifications</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <!-- Notification List -->
+        <div class="notification-item">
+          <i class="fas fa-envelope notification-icon"></i>
+          <div class="notification-text">
+            <strong>New Message</strong><br>
+            You have received a message from John.
+          </div>
+        </div>
+
+        <div class="notification-item">
+          <i class="fas fa-tasks notification-icon"></i>
+          <div class="notification-text">
+            <strong>Task Reminder</strong><br>
+            Complete your daily report by 5 PM.
+          </div>
+        </div>
+
+        <div class="notification-item">
+          <i class="fas fa-exclamation-triangle notification-icon"></i>
+          <div class="notification-text">
+            <strong>Warning</strong><br>
+            Your subscription will expire soon. Renew it now.
+          </div>
+        </div>
+
+        <!-- Add more notification items if needed -->
+        <div class="offcanvas-footer">
+          <button class="btn btn-primary archive-button">
+            <i class="fas fa-archive"></i> Archive All
+          </button>
+        </div>
+      </div>
+        </div>
+      </div>
+
+   
+
+
+
+

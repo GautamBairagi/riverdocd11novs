@@ -1,0 +1,72 @@
+const baseUrl = 'https://alora-2.vercel.app/api/v1/';
+
+
+export const adminEndPoints = {
+    mainLogin: `${baseUrl}login`,
+    addpriscriber: `${baseUrl}prescriber`,
+    adminNurseById: `${baseUrl}prescriber/`,
+    getpriscriber: `${baseUrl}prescribers`,
+    addnotes: `${baseUrl}note`,
+    getnotes: `${baseUrl}notes`,
+    addmails: `${baseUrl}sendmail`,
+    getmails: `${baseUrl}sendmails`,
+    getbyidmail: `${baseUrl}sendmail/`,
+    adminPatientAdd: `${baseUrl}patient`,
+    adminPatientById: `${baseUrl}patient/`,
+    adminPatientGet: `${baseUrl}patients`,
+    adminNurseGet: `${baseUrl}prescribers`,
+    adminAppointment: `${baseUrl}appointment`,
+    adminAppointmentGet: `${baseUrl}appointments`,
+    adminDischarge: `${baseUrl}discharge`,
+    adminDischargeGet: `${baseUrl}discharges`,
+    approveNurse: `${baseUrl}prescriber/prescriberstatus/`,
+    Userlist: `${baseUrl}users`,
+    Useradd: `${baseUrl}user`,
+    currentProviderAdd: `${baseUrl}currentprovider`,
+    currentProviderGet: `${baseUrl}currentproviders`,
+    residentGet: `${baseUrl}residents`,
+    addResident: `${baseUrl}resident`,
+    currentMedicationGet: `${baseUrl}currentmedications`,
+    currentMedication: `${baseUrl}currentmedication`,
+    dental: `${baseUrl}dental`,
+    dentalGet: `${baseUrl}dentals`,
+    epsdtr: `${baseUrl}epsdtr`,
+    epsdtrsGet: `${baseUrl}epsdtrs`,
+    healthmedical: `${baseUrl}healthmedical`,
+    healthmedicalGet: `${baseUrl}healthmedicals`,
+    saftey: `${baseUrl}saftey`,
+    safteysGet: `${baseUrl}safteys`,
+    personalGrowth: `${baseUrl}personalandemotinalgrowth`,
+    personalGrowthGet: `${baseUrl}personalandemotinalgrowths`,
+    pharmacyget: `${baseUrl}pharmacys`,
+    pharmacyadd: `${baseUrl}pharmacy`,
+    medicalprofessionaladd: `${baseUrl}medicalprofessional`,
+    medicalprofessionalget: `${baseUrl}medicalprofessionals`,
+    announcementgetss: `${baseUrl}announcements`,
+    announcementaddss: `${baseUrl}announcement`,
+
+    appointmentsgetss: `${baseUrl}appointments`,
+    appointmentsaddss: `${baseUrl}appointment`,
+   
+    tranportationGet: `${baseUrl}transportations`,
+    tranportation: `${baseUrl}transportation`,
+    workAndCarrierGet: `${baseUrl}workandcareerandeducations`,
+    workAndCarrier: `${baseUrl}workandcareerandeducation`,
+    communicationAndsocialGet: `${baseUrl}communicationandsociainvolvements`,
+    addCommunicationAndsocial: `${baseUrl}communicationandsociainvolvement`,
+    communicationGet: `${baseUrl}communications`,
+    addCommunication: `${baseUrl}communication`,
+    selfHomeCareGet: `${baseUrl}selfhomecares`,
+    addSelfHomeCare: `${baseUrl}selfhomecare`,
+    
+    userGroupGet: `${baseUrl}usernewfacilitys`,
+    addUserGroup: `${baseUrl}usernewfacility`,
+    UserGroupById: `${baseUrl}usernewfacility/`,
+
+    prnmedicationsGet: `${baseUrl}prnmedications`,
+    prnmedicationadd: `${baseUrl}prnmedication`,
+
+    
+    
+
+}
